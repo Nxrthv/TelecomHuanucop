@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/frontend/Resources/Images/logo.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>TELEINCA | Centros de Experiencia</title>
+    <style>
+        #container {
+            position: relative;
+            width: 100%;
+            height: 20em;
+            overflow: hidden;
+        }
+
+        .window {
+            position: absolute;
+            width: 100%;
+            height: 90%;
+            transition: transform 1s ease;
+        }
+
+        .window-2 {
+            transform: translateX(100%);
+        }
+
+        .slide-left {
+            transform: translateX(-100%);
+        }
+
+        .slide-left-reverse {
+            transform: translateX(-100%);
+        }
+
+        .btn-slide {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .btn-back {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="position-sticky top-0" id="contNav" style="z-index: 1000;"></div>
+    <div class="my-5 d-flex justify-content-evenly flex-wrap">
+        <div class="align-content-center">
+            <h3 class="display-5 mx-3">Centros de Experiencia</h3>
+            <p class="mx-4">Confía únicamente en nuestros canales de contacto oficiales</p>
+            <div class="container p-3" style="max-height: 300px; width: 380px; overflow-y: auto;">
+                <div class="list-group">
+                    <div class="list-group-item">
+                        <p><strong style="color: #00755c;">Centro Huanuco</strong><br><small>Jr. Las Dalias N°134 Urb.Paucarbambilla - Huanuo</small><br>
+                            <a href="/Index.html"><small>https://teleinca.com.pe/teleinca-centro-de-huanuco</small></a><br>
+                            <strong>Horario: </strong><small>Lunes a Sabado de 8:30 a.m. a 6:30 p.m.</small></p>
+                    </div>
+                    <div class="list-group-item">
+                        <p><strong style="color: #00755c;">Centro Ambo</strong><br><small>Calle Constitución N° 288 - Ambo</small><br>
+                            <a href="/Index.html"><small>https://teleinca.com.pe/teleinca-centro-de-ambo</small></a><br>
+                            <strong>Horario: </strong><small>Lunes a Sabado de 8:30 a.m. a 6:30 p.m.</small></p>
+                    </div>
+                    <div class="list-group-item">
+                        <p><strong style="color: #00755c;">Centro Chanchamayo</strong><br><small>Jr. Junín S/N Junín - Chanchamayo</small><br>
+                            <a href="/Index.html"><small>https://teleinca.com.pe/teleinca-centro-de-chanchamayo</small></a><br>
+                            <strong>Horario: </strong><small>Lunes a Sabado de 8:30 a.m. a 6:30 p.m.</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="img img-fluid mt-3"
+            src="https://peruretail.sfo3.cdn.digitaloceanspaces.com/wp-content/uploads/cyber-plaza-fachada-dia.jpg"
+            width="700px">
+    </div>
+    <div id="contFoot"></div>
+    <script>
+        function showSecondWindow() {
+            const window1 = document.getElementById('window1');
+            const window2 = document.getElementById('window2');
+
+            window1.style.transition = 'transform 1s ease';
+            window1.style.transform = 'translateX(-100%)';
+
+            window2.style.transition = 'transform 1s ease';
+            window2.style.transform = 'translateX(0)';
+
+            setTimeout(() => {
+                window1.style.zIndex = '1';
+                window2.style.zIndex = '2';
+            }, 1000);
+        }
+
+        function goBackToFirstWindow() {
+            const window1 = document.getElementById('window1');
+            const window2 = document.getElementById('window2');
+
+            window2.style.transition = 'transform 1s ease';
+            window2.style.transform = 'translateX(100%)';
+
+            window1.style.transition = 'transform 1s ease';
+            window1.style.transform = 'translateX(0)';
+
+            setTimeout(() => {
+                window2.style.zIndex = '1';
+                window1.style.zIndex = '2';
+            }, 1000);
+        }
+    </script>
+    <script src="/frontend/Resources/Js/Dependencias.js"></script>
+    <script src="/frontend/Resources/Js/Elements.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+.tab {
+    border: none;
+    background: none;
+    font-size: 14px;
+    color: #666;
+    transition: all 0.2s ease;
+    flex: 1;
+    text-align: center;
+    min-width: 120px;   
+}
+
+.tab.active {
+    color: #198754;
+    border-bottom: 3px solid #198754;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+#pendientes, #pagados {
+    min-width: 100%;
+}
+
+.check-item {
+    width: 30px;
+    height: 30px;
+}

@@ -1,0 +1,323 @@
+    /* Estilos del hero */
+    .hero-section {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/frontend/Resources/Images/internet_fondo.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        padding-top: 76px;
+    }
+
+    .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+        font-weight: bold;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Estilos de las tarjetas de servicio */
+    .services-container {
+        padding: 5rem 0;
+        min-height: calc(100vh - 76px);
+        display: flex;
+        align-items: center;
+    }
+
+    .service-card {
+        border-radius: 35px;
+        border: 5px solid #198754;
+        transition: transform 0.3s ease;
+        margin: 0 auto;
+        max-width: 400px;
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .service-title {
+        color: #198754;
+        font-weight: 600;
+        font-size: 1.5rem;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+    }
+
+    .service-text {
+        color: #333;
+        font-size: 1rem;
+        font-family: 'Montserrat', sans-serif;
+        line-height: 1.5;
+        text-align: justify;
+        padding: 0 1rem;
+    }
+
+    .card-body-imagen {
+        margin: 1.5rem 0;
+        text-align: center;
+    }
+
+    .card-body-imagen img {
+        width: 200px;
+        height: 200px;
+        object-fit: contain;
+        border: 2px solid black;
+    }
+
+    /* Estilos de botones */
+    #btnInteresa {
+        background-color: var(--color-primario);
+        color: white;
+        border: none;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        border-radius: 2rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    #btnInteresa:hover {
+        background-color: #146c43;
+    }
+
+    .btn-velocidad {
+        background-color: #198754;
+        color: white;
+        border: none;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        border-radius: 2rem;
+        cursor: pointer;
+        margin: 0.5rem auto 1rem;
+        display: block;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .btn-velocidad:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        background-color: #146c43;
+    }
+
+    .btn-interest {
+        background-color: #198754;
+        color: white;
+        border: none;
+        padding: 1rem 2.5rem;
+        font-size: 1.3rem;
+        border-radius: 2rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin: 1rem 0;
+    }
+
+    .btn-interest:hover {
+        background-color: #146c43;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .btn-cobertura {
+        background-color: #ffffff;
+        color: #198754;
+        border: 2px solid #198754;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        border-radius: 2rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .btn-cobertura:hover {
+        background-color: #198754;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .btn-back {
+        background: none;
+        border: none;
+        color: #198754;
+        font-size: 1.1rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .btn-back:hover {
+        color: #146c43;
+    }
+
+    /* Estilos de coberturas */
+    .coberturas-container {
+        padding: 1rem;
+    }
+
+    .header-cobertura {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .velocidad-seleccionada {
+        margin: 0 auto;
+        color: #198754;
+        font-weight: 600;
+    }
+
+    .zonas-cobertura {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .interest-container {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .header-section {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+    }
+
+    .velocidades-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 0 1rem;
+    }
+
+    /* Estilos de beneficios */
+    .beneficios-section {
+        padding: 60px 20px;
+        background-color: #aaeccd;
+    }
+
+    .beneficios-section h2 {
+        text-align: center;
+        padding-bottom: 2rem;
+        font-size: 2rem;
+        font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    .beneficio-card {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        height: 100%;
+        transition: transform 0.3s ease;
+        margin: 0 10px;
+    }
+    
+    .beneficio-card:hover {
+        transform: translateY(-10px);
+    }
+    
+    .beneficio-imagen {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 20px;
+        padding: 20px;
+        background: #e9ecef;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .beneficio-imagen img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .beneficio-card h3 {
+        color: #2c3e50;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+    
+    .beneficio-card p {
+        color: #6c757d;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    .card-body-imagen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+    .card-body-imagen i {
+        padding: 30px;
+        border-radius: 50%;
+        background-color: rgba(0,0,0,0.05);
+    }
+    /* Media Queries */
+    @media (max-width: 768px) {
+        .service-card {
+            margin-bottom: 1.5rem;
+        }
+        
+        .services-container {
+            padding-top: 60px;
+        }
+
+        .service-title {
+            font-size: 1.3rem;
+        }
+
+        .service-text {
+            font-size: 0.9rem;
+        }
+
+        .hero-content h1 {
+            font-size: 2rem;
+        }
+        
+        .hero-content p {
+            font-size: 1rem;
+        }
+        
+        #btnInteresa {
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .beneficios-section {
+            padding: 60px 40px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .beneficios-section {
+            padding: 60px 80px;
+        }
+    }

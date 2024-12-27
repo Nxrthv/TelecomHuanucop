@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .footer>ul>li {
+            cursor: pointer;
+            font-weight: lighter;
+            font-size: 13px;
+        }
+
+        .border-underline {
+            transition: .3s ease;
+        }
+
+        .border-underline:hover {
+            border-bottom: 1px solid white;
+            transition: .3s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <footer class="text-white py-4 bg">
+        <div class="container ">
+            <div class="row align-items-center text-left">
+                <div class="col-lg-3">
+                    <img src="/frontend/Resources/Images/logo.png" alt="Logo de la Empresa" class="img-fluid"
+                        style="align-items: start;">
+                    <p style="margin-top: 5em; font-size: 12px;" class="fw-light">TELEINCA S.A.C. <br> RUC 20601340675
+                    </p>
+                </div>
+                <div class="col-lg-3 footer">
+                    <strong>Informacion Legal</strong>
+                    <ul class="list-unstyled">
+                        <li style="margin-bottom: -1em; margin-top: .3em;"><span class="border-underline"><a
+                                    class="text-white text-decoration-none"
+                                    href="/frontend/Resources/Images/terminos_y_condiciones.pdf" download
+                                    class="note">Términos y Condiciones</a></span></li><br>
+                        <li style="margin-bottom: -1em; margin-top: .3em;"><span class="border-underline"><a
+                                    href="/frontend/Views/CentrosDeExperiencia.html"
+                                    class="text-white text-decoration-none">Reclamos y Solicitudes</a></span>
+                        </li><br>
+                        <li style="margin-top: .3em;"><span class="border-underline"><a
+                                    href="https://www.osiptel.gob.pe/portal-de-operadoras/" target="_blank"
+                                    class="text-white text-decoration-none">Osiptel</a></span></li><br>
+                        <li class="me-3 fw-light"><span class="fw-bold">Contacto:</span><br>
+                            <a href="mailto:vargasesquivelandres@gmail.com" class="text-decoration-none text-white"><p>contacto@teleinca.pe</p></a>
+                        </li>
+                        <li><a style="text-decoration: none; color: green; background: white; padding: .3em 1em; border-radius: 1em;"
+                                href="tel:062-514798"><i class="bi bi-telephone"></i> Ventas: 062-514798</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 footer" style="padding-left: 1em;border-left: 1px solid white;">
+                    <strong>Navega</strong>
+                    <ul class="list-unstyled">
+                        <li style="margin-bottom: -1em; margin-top: .3em;"><span class="border-underline"><a
+                                    onclick="smoothScrollTo('promociones')">Promociones</a></span></li><br>
+                        <li style="margin-bottom: -1em; margin-top: .3em;"><span class="border-underline"><a
+                                    onclick="smoothScrollTo('beneficios')">Beneficios</a></span></li><br>
+                        <li style="margin-top: .3em;"><span class="border-underline"><a
+                                    onclick="smoothScrollTo('pagos')">Pagos</a></span></li>
+                        <li class="me-3 fw-bold pt-3"><strong>Teléfono:</strong></li>
+                        <li class="me-3 fw-light">Atención al Cliente:<br> +51 962 624 690</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4 footer" style="padding-left: 1em;border-left: 1px solid white;">
+                    <strong>Dirección</strong>
+                    <ul class="list-unstyled">
+                        <li class="me-3 fw-light">Centro de Experiencia Huánuco: Jr. Abtao N° 1719 Urb. Paucarbambilla
+                            Huánuco-Huánuco-Huánuco</li><br>
+                        <li class="me-3 fw-light">Horario: De lunes a sábado de 8:30 a. m. a 6:30 p. m.</li>
+                        <br>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/frontend/Resources/Js/Dependencias.js"></script>
+
+</html>

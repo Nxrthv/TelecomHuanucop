@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/frontend/Css/panelUser.css">
+    <link rel="shortcut icon" href="/frontend/Resources/Images/logo.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>TELEINCA | Panel de Usuario</title>
+</head>
+<body class="d-flex flex-column min-vh-100" style="background-color: #f8f9fa;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/frontend/Resources/Images/logo.png" alt="TELEINCA" height="40">
+                Panel de Usuario
+            </a>
+            <div class="ms-auto d-flex align-items-center">
+                <div class="text-white me-3">
+                    <i class="fas fa-user-circle fs-4 me-2"></i>
+                    <span id="nombreUsuario" class="fw-bold"></span>
+                    <small class="ms-2">ID: <span id="codigoUsuario"></span></small>
+                </div>
+                <button onclick="cerrarSesion()" class="btn btn-outline-light">
+                    <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h2 class="card-title mb-4">
+                    <i class="fas fa-file-invoice-dollar text-success"></i>
+                    Gestión de Recibos
+                </h2>
+
+                <ul class="nav nav-pills mb-4">
+                    <li class="nav-item">
+                        <button class="nav-link active me-2" onclick="cambiarTab('pendientes')">
+                            <i class="fas fa-clock me-1"></i> Recibos Pendientes
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" onclick="cambiarTab('pagados')">
+                            <i class="fas fa-check-circle me-1"></i> Recibos Pagados
+                        </button>
+                    </li>
+                </ul>
+
+                <div id="pendientes" class="tab-content active">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="table-success">
+                                <tr>
+                                    <th><i class="fas fa-hashtag"></i> ID Recibo</th>
+                                    <th><i class="fas fa-file-alt"></i> Concepto</th>
+                                    <th><i class="fas fa-money-bill-wave"></i> Precio</th>
+                                    <th><i class="fas fa-calendar"></i> Fecha Vencimiento</th>
+                                    <th><i class="fas fa-tasks"></i> Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-body_pendientes">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="pagados" class="tab-content">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="table-success">
+                                <tr>
+                                    <th><i class="fas fa-hashtag"></i> ID Recibo</th>
+                                    <th><i class="fas fa-file-alt"></i> Concepto</th>
+                                    <th><i class="fas fa-money-bill-wave"></i> Precio</th>
+                                    <th><i class="fas fa-check"></i> Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-body_pagados">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-auto py-3 bg-dark text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                
+                <div class="col-md-4 d-flex flex-column align-items-center">
+                    <h5 class="text-center">Síguenos:</h5>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/HuanucoTelecomTV/?locale=es_LA" class="text-white"><i class="fab fa-facebook fa-2x"></i></a>                        
+                    </div>
+                </div>
+                
+            </div>
+            <hr class="my-3">
+            <div class="row text-center">
+                <div class="col-12">
+                    <p class="mb-1">¡Gracias por valorar nuestro trabajo!</p>
+                    <p class="mb-0">Copyright ©2025 TELEINCA - OFICINA DE TECNOLOGÍAS DE LA INFORMACIÓN.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/frontend/Resources/Js/Dependencias.js"></script>
+    <script>
+        async function cargarRecibosPendientes() {
+            try {
+                const codigoUsuario = sessionStorage.getItem('codigoUsuario');
+                const response = await fetch(`http://localhost:3000/api/recibos_pendientes/${codigoUsuario}`);
+                const recibos = await response.json();
+                
+                const tablaBody = document.getElementById('tabla-body_pendientes');
+                tablaBody.innerHTML = '';
+                
+                if (recibos.length === 0) {
+                    tablaBody.innerHTML = '<tr><td colspan="4">No hay recibos pendientes</td></tr>';
+                    return;
+                }
+                
+                recibos.forEach(recibo => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${recibo.codigo || 'N/A'}</td>
+                        <td>${recibo.concepto || 'N/A'}</td>
+                        <td>S/. ${recibo.deuda  || '0.00'}</td>
+                        <td>${recibo.fecha_vencimiento || 'N/A'}</td>
+                        <td><button class="btn btn-success rounded-pill px-4" onclick="guardarCodigoYRedirigir('${recibo.codigo}', '${recibo.deuda}')">Pagar</button></td>
+                        
+                    `;
+                    tablaBody.appendChild(tr);
+                });
+            } catch (error) {
+                const tablaBody = document.getElementById('tabla-body_pendientes');
+                tablaBody.innerHTML = `
+                    <tr><td colspan="4">Error al cargar los recibos pendientes</td></tr>
+                `;
+            }
+        }
+
+        async function cargarRecibosPagados() {
+            try {
+                const codigoUsuario = sessionStorage.getItem('codigoUsuario');
+                const response = await fetch(`http://localhost:3000/api/recibos_pagados/${codigoUsuario}`);
+                const recibos = await response.json();
+                
+                const tablaBody = document.getElementById('tabla-body_pagados');
+                tablaBody.innerHTML = '';
+                
+                if (recibos.length === 0) {
+                    tablaBody.innerHTML = '<tr><td colspan="4">No hay recibos pagados</td></tr>';
+                    return;
+                }
+                
+                recibos.forEach(recibo => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${recibo.codigo_pago || 'N/A'}</td>
+                        <td>${recibo.concepto || 'N/A'}</td>
+                        <td>S/. ${recibo.deuda || '0.00'}</td>
+                        <td><img class="img img-fluid check-item" src="/frontend/Resources/Images/pagado.png"></td>
+                    `;
+                    tablaBody.appendChild(tr);
+                });
+            } catch (error) {
+                const tablaBody = document.getElementById('tabla-body_pagados');
+                tablaBody.innerHTML = `
+                    <tr><td colspan="4">Error al cargar los recibos pagados</td></tr>
+                `;
+            }
+        }
+
+        function cambiarTab(tabId) {
+            // Ocultar todos los tab-content
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.style.display = 'none';
+                content.classList.remove('active');
+            });
+            
+            // Remover active de todos los tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Mostrar el tab-content seleccionado
+            const selectedContent = document.getElementById(tabId);
+            selectedContent.style.display = 'block';
+            selectedContent.classList.add('active');
+            
+            // Activar el botón seleccionado
+            event.target.classList.add('active');
+            
+            // Cargar los recibos correspondientes
+            if (tabId === 'pendientes') {
+                cargarRecibosPendientes();
+            } else {
+                cargarRecibosPagados();
+            }
+        }
+
+        // Cargar recibos pendientes al iniciar la página
+        window.addEventListener('load', () => {
+            cargarRecibosPendientes();
+        });
+
+        // Obtener y mostrar el nombre del usuario al cargar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            const nombreUsuario = sessionStorage.getItem('nombreUsuario');
+            if (nombreUsuario) {
+                document.getElementById('nombreUsuario').textContent = nombreUsuario;
+            }
+        });
+        //Obtener el codigo del usuario para hacer la consulta
+        document.addEventListener('DOMContentLoaded', () => {
+            const codigoUsuario = sessionStorage.getItem('codigoUsuario');
+            if (codigoUsuario) {
+                document.getElementById('codigoUsuario').textContent = codigoUsuario;
+            }
+        });
+        function guardarCodigoYRedirigir(codigo, monto) {
+        localStorage.setItem('codigoRecibo', codigo);  // Guarda el código en localStorage
+        localStorage.setItem('codigoUsuario', codigoUsuario);
+        localStorage.setItem('montoPago', monto);  // Guardamos el monto específico
+        window.location.href = '/frontend/Views/panelPago.html';  // Redirige a la página de pago
+        console.log(codigo);
+        console.log(codigoUsuario);
+        console.log(monto);
+        }
+
+        function cerrarSesion() {
+            // Limpiar todos los datos 
+            sessionStorage.clear();
+            localStorage.clear();
+            
+            // Redirigir al login
+            window.location.href = '/frontend/Views/Register.html';
+            
+            // Denegar navegación hacia atrás
+            window.history.pushState(null, '', '/Index.html');
+            window.onpopstate = function(event) {
+                window.history.forward();
+            };
+        }
+    </script>
+</body>
+</html>
