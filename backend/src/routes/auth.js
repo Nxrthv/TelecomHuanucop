@@ -6,7 +6,7 @@ router.post('/login', async (req, res) => {
   try {
     const { dni, password } = req.body;
     
-    const query = 'SELECT codigo, dni, abonado FROM "SH_teleinca01".abonados WHERE codigo = $1 AND dni = $2';
+    const query = 'SELECT codigo, dni, abonado FROM "SH_huanuco002".abonados WHERE codigo = $1 AND dni = $2';
     const result = await pool.query(query, [password, dni]);
 
     if (result.rows.length > 0) {

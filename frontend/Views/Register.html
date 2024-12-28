@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -12,7 +12,7 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <title>TELEINCA | Login</title>
 </head>
-<div id="loading" aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
+<div id="loading" aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster" style="background-color: #ece4f0;">
   <div class="wheel"></div>
   <div class="hamster">
       <div class="hamster__body">
@@ -33,7 +33,21 @@
 <body class="body">
   <form class="form_container" onsubmit="ingresarPanel(event)">
     <div class="logo_container">
-      <a href="/Index.html"><img src="/frontend/Resources/Images/logo.ico" alt=""></a>
+      <a href="/Index.html"><img class="logo" src="/frontend/Resources/Images/logo.png" alt=""></a>
+      <svg class="user-icon" width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" 
+          stroke="#8b5cf6" 
+          stroke-width="1.5"  
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+        <path d="M3 22C3.57038 20.0332 4.74796 18.2971 6.37869 17.0399C8.00942 15.7827 10.0122 15.0687 12.0789 15C14.1456 15.0687 16.1484 15.7827 17.7791 17.0399C19.4099 18.2971 20.5874 20.0332 21.1578 22" 
+          stroke="#8b5cf6" 
+          stroke-width="1.5" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+        <path d="M12 10C13.1046 10 14 9.10457 14 8C14 6.89543 13.1046 6 12 6C10.8954 6 10 6.89543 10 8C10 9.10457 10.8954 10 12 10Z" 
+          fill="#8b5cf6"/>
+      </svg>
     </div>
     <div class="title_container">
       <p class="title">Bienvenid@</p>
@@ -60,7 +74,7 @@
     <button title="Sign In" type="submit" class="sign-in_btn">
       <span>Ingresar</span>
     </button>
-    <a href="/frontend/Resources/Images/terminos_y_condiciones.pdf" download class="note">Terminos de uso &amp; Condiciones</a>
+    <a href="/frontend/Resources/Images/t&c.pdf" download class="note">Terminos de uso &amp; Condiciones</a>
   </form>
   <script>
     async function ingresarPanel(event) {

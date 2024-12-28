@@ -10,8 +10,8 @@
 }
 
 .tab.active {
-    color: #198754;
-    border-bottom: 3px solid #198754;
+    color: #8b07ff;
+    border-bottom: 3px solid #8b07ff;
 }
 
 .tab-content {
@@ -30,3 +30,17 @@
     width: 30px;
     height: 30px;
 }
+ .bg-custom {
+    background-color: #8b07ff;
+ }
+ .text-custom {
+    color: #8b07ff;
+ }
+ .table-custom {
+    background-color: #8b07ff;
+    color: #fff;
+ }
+ .btn-custom {
+    background-color: #8b07ff;
+    color: #fff;
+ }

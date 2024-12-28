@@ -20,22 +20,21 @@ router.get('/:codigoUsuario', async (req, res) => {
     TO_CHAR(d.fecha_vencimiento, 'YYYY-MM-DD') AS fecha_vencimiento,
     d.fecha_ultimo_pago
 FROM 
-    "SH_teleinca01".deuda d
+    "SH_huanuco002".deuda d
 INNER JOIN 
-    "SH_teleinca01".abonados k
+    "SH_huanuco002".abonados k
     ON d.codigo_abonado = k.codigo
 LEFT JOIN 
     "ventas".conceptos_comprobante cb
     ON d.detalle::INTEGER = cb.id
 LEFT JOIN 
-    "SH_teleinca01".cobros_servicio cs
+    "SH_huanuco002".cobros_servicio cs
     ON d.codigo_abonado = cs.codigo_abonado
 WHERE 
     (d.codigo_cobro IS NULL OR d.codigo_cobro = '')
-    AND cs.anulado = 'f'
     AND d.anulado = 'f'
-    AND d.fecha_ultimo_pago <= '2024-12-31'
-	  AND d.codigo_abonado = $1
+    AND d.fecha_ultimo_pago <= (DATE_TRUNC('month', CURRENT_DATE) + INTERVAL '1 MONTH - 1 DAY')
+    AND d.codigo_abonado = $1
 ORDER BY
 	d.codigo_abonado ASC,
     d.fecha_ultimo_pago ASC

@@ -10,7 +10,7 @@
     <title>TELEINCA | Panel de Usuario</title>
 </head>
 <body class="d-flex flex-column min-vh-100" style="background-color: #f8f9fa;">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="/frontend/Resources/Images/logo.png" alt="TELEINCA" height="40">
@@ -33,18 +33,18 @@
         <div class="card shadow-sm">
             <div class="card-body">
                 <h2 class="card-title mb-4">
-                    <i class="fas fa-file-invoice-dollar text-success"></i>
+                    <i class="fas fa-file-invoice-dollar text-custom"></i>
                     Gestión de Recibos
                 </h2>
 
                 <ul class="nav nav-pills mb-4">
                     <li class="nav-item">
-                        <button class="nav-link active me-2" onclick="cambiarTab('pendientes')">
+                        <button class="btn btn-outline-secondary rounded-pill me-2" onclick="cambiarTab('pendientes')">
                             <i class="fas fa-clock me-1"></i> Recibos Pendientes
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" onclick="cambiarTab('pagados')">
+                        <button class="btn btn-outline-secondary rounded-pill" onclick="cambiarTab('pagados')">
                             <i class="fas fa-check-circle me-1"></i> Recibos Pagados
                         </button>
                     </li>
@@ -53,7 +53,7 @@
                 <div id="pendientes" class="tab-content active">
                     <div class="table-responsive">
                         <table class="table table-hover">
-                            <thead class="table-success">
+                            <thead class="table-custom">
                                 <tr>
                                     <th><i class="fas fa-hashtag"></i> ID Recibo</th>
                                     <th><i class="fas fa-file-alt"></i> Concepto</th>
@@ -71,7 +71,7 @@
                 <div id="pagados" class="tab-content">
                     <div class="table-responsive">
                         <table class="table table-striped">
-                            <thead class="table-success">
+                            <thead class="table-custom">
                                 <tr>
                                     <th><i class="fas fa-hashtag"></i> ID Recibo</th>
                                     <th><i class="fas fa-file-alt"></i> Concepto</th>
@@ -133,7 +133,7 @@
                         <td>${recibo.concepto || 'N/A'}</td>
                         <td>S/. ${recibo.deuda  || '0.00'}</td>
                         <td>${recibo.fecha_vencimiento || 'N/A'}</td>
-                        <td><button class="btn btn-success rounded-pill px-4" onclick="guardarCodigoYRedirigir('${recibo.codigo}', '${recibo.deuda}')">Pagar</button></td>
+                        <td><button class=" btn-custom rounded-pill px-4" onclick="guardarCodigoYRedirigir('${recibo.codigo}', '${recibo.deuda}')">Pagar</button></td>
                         
                     `;
                     tablaBody.appendChild(tr);
@@ -185,9 +185,11 @@
                 content.classList.remove('active');
             });
             
-            // Remover active de todos los tabs
-            document.querySelectorAll('.tab').forEach(tab => {
-                tab.classList.remove('active');
+            // Remover active de todos los botones
+            document.querySelectorAll('.btn').forEach(btn => {
+                btn.classList.remove('active');
+                btn.classList.remove('btn-secondary');
+                btn.classList.add('btn-outline-secondary');
             });
             
             // Mostrar el tab-content seleccionado
@@ -196,7 +198,8 @@
             selectedContent.classList.add('active');
             
             // Activar el botón seleccionado
-            event.target.classList.add('active');
+            event.target.classList.remove('btn-outline-secondary');
+            event.target.classList.add('btn-secondary');
             
             // Cargar los recibos correspondientes
             if (tabId === 'pendientes') {
