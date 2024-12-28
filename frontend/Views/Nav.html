@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         /* Navegación */
-        #nav{
+        #nav {
             width: 100%;
         }
-        .bg{
+
+        .bg {
             background-color: #2A004E;
         }
+
         .navbar-toggler-icon {
             filter: invert(100%);
             filter: brightness(10);
         }
-        .dropdown-item:focus, .dropdown-item:hover {
+
+        .dropdown-item:focus,
+        .dropdown-item:hover {
             color: white !important;
         }
 
@@ -25,117 +30,195 @@
             display: none;
         }
 
-        #login > a > button {
-        --arrow-width: 10px;
-        --arrow-stroke: 2px;
-        box-sizing: border-box;
-        border: 1px solid white;
-        border-radius: 20px;
-        color: white;
-        padding: .5em 1.8em;
-        background: #00755c;
-        display: flex;
-        gap: 0.6em;
-        transition: 0.2s ease;
-        align-items: center;
-        font-weight: bold;
+        .tooltip-container {
+            --background: #2A004E;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            font-size: 16       px;
+            font-weight: 600;
+            color: white;
+            padding: .5em 1em;
+            border-radius: 2em;
+            height: 50px;
+            width: 180px;
+            display: grid;
+            place-items: center;
+            border: 1px solid white;
         }
 
-        #login > a > button .arrow-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        .text1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            place-items: center;
+            transform-origin: -100%;
+            transform: scale(1);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
         }
 
-        #login > a > button .arrow {
-        margin-top: 1px;
-        width: var(--arrow-width);
-        background: var(--green);
-        height: var(--arrow-stroke);
-        position: relative;
-        transition: 0.2s;
+        .tooltip-container span:last-child {
+            position: absolute;
+            top: 0%;
+            left: 100%;
+            width: 100%;
+            height: 100%;
+            border-radius: 2em;
+            opacity: 1;
+            background-color: var(--background);
+            z-index: -1;
+            transform: scale(0);
+            transform-origin: 0;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            display: grid;
+            place-items: center;
         }
 
-        #login > a > button .arrow::before {
-        content: "";
-        box-sizing: border-box;
-        position: absolute;
-        border: solid white;
-        border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
-        display: inline-block;
-        top: -3px;
-        right: 3px;
-        transition: 0.2s;
-        padding: 3px;
-        transform: rotate(-45deg);
+        .tooltip {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 12em;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            background: #4c008e;
+            z-index: -1;
+            border-radius: 1em;
+            scale: 0;
+            transform-origin: 0 0;
+            text-transform: capitalize;
+            font-weight: 400;
+            box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
         }
 
-        #login > a > button:hover {
-        background-color: #014f3e;
+        .tooltip::before {
+            position: absolute;
+            content: "";
+            height: 0.6em;
+            width: 0.6em;
+            bottom: -1em;
+            left: 50%;
+            transform: translate(-50%) rotate(45deg);
+            background: var(--background);
         }
 
-        #login > a > button:hover .arrow {
-        background: white;
+        .tooltip-container:hover .tooltip {
+            top: -80%;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            scale: 1;
+            text-align: center;
+            animation: shake 0.5s ease-in-out both;
         }
 
-        #login > a > button:hover .arrow:before {
-        right: 0;
+        .tooltip-container:hover {
+            box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+            color: white;
+            border-color: transparent;
         }
-        #logo{
+
+        .tooltip-container:hover span:last-child {
+            transform: scale(1);
+            left: 0;
+        }
+
+        .tooltip-container:hover .text1 {
+            opacity: 0;
+            top: 0%;
+            left: 100%;
+            transform: scale(0);
+        }
+
+        @keyframes shake {
+            0% {
+                rotate: 0;
+            }
+
+            25% {
+                rotate: 7deg;
+            }
+
+            50% {
+                rotate: -7deg;
+            }
+
+            75% {
+                rotate: 1deg;
+            }
+
+            100% {
+                rotate: 0;
+            }
+        }
+
+        #logo {
             width: 150px;
         }
     </style>
 </head>
+
 <body>
     <nav id="nav" class="navbar navbar-expand-lg bg position-sticky top-0">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/Index.html"><img id="logo" src="/frontend/Resources/Images/logo.png" alt=""></a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand mx-3" href="/Index.html"><img id="logo" src="/frontend/Resources/Images/logo.png"
+                    alt=""></a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon toggler-icon-light"></span>
             </button>
             <div class="collapse navbar-collapse row" id="navbarNav">
-                <ul class="navbar-nav px-3 pb-2" style="justify-content: end;">
-                    <li class="nav-item"><a class="nav-link border-end px-1 py-md-0 px-md-4" style="font-size: 13px; color: #ffffff; padding-inline: 2em;" href="/frontend/Views/CentrosDeExperiencia.html">Centros de Experiencia</a></li>
-                    <li class="nav-item"><a class="nav-link border-end px-1 py-md-0 px-md-4" style="font-size: 13px; color: #ffffff; padding-inline: 2em;" href="/frontend/Views/Conocenos.html">Conócenos</a></li>
-                    <li class="nav-item"><a class="nav-link border-end px-1 py-md-0 px-md-4" style="font-size: 13px; color: #ffffff; padding-inline: 2em;" href="/frontend/Views/Register.html">¿Ya eres cliente?</a></li>
-                    <li class="nav-item"><a class="nav-link border-end px-1 py-md-0 px-md-4" style="font-size: 13px; color: #ffffff; padding-inline: 2em;" href="#" data-bs-toggle="modal" data-bs-target="#myModal">Solicitud de suspensión o baja</a></li>
-                    <li class="nav-item"><a class="nav-link px-1 py-md-0 px-md-4" style="font-size: 13px; color: #ffffff; padding-inline: 2em;" href="https://wa.me/962624690?text=Hola, tengo una consulta." target="_blank">¿Necesitas ayuda? <i class="bi bi-whatsapp"></i></a></li>
+                <ul class="navbar-nav px-3 pb-2" style="justify-content: start;">
+                    <li class="nav-item"><a class="nav-link px-1 mx-md-2 text-white fw-light" style="font-size: 13px;"
+                            href="/frontend/Views/CentrosDeExperiencia.html"><i class="bi bi-geo-alt"></i> Centros de
+                            Experiencia</a></li>
+                    <li class="nav-item"><a class="nav-link px-1 mx-md-2 text-white fw-light" style="font-size: 13px;"
+                            href="/frontend/Views/Conocenos.html"><i class="bi bi-building"></i> Conócenos</a></li>
+                    <li class="nav-item"><a class="nav-link px-1 mx-md-2 text-white fw-light" style="font-size: 13px;"
+                            href="/frontend/Views/Register.html"><i class="bi bi-people"></i> ¿Ya eres parte de nuesta
+                            familia?</a></li>
+                    <li class="nav-item"><a class="nav-link px-1 mx-md-2 text-white fw-light" style="font-size: 13px;"
+                            href="#" data-bs-toggle="modal" data-bs-target="#myModal"><i
+                                class="bi bi-envelope-paper"></i> Solicitud de suspensión o baja</a></li>
+                    <li class="nav-item"><a class="nav-link px-1 mx-md-2 text-white fw-light" style="font-size: 13px;"
+                            href="https://wa.me/962624690?text=Hola, tengo una consulta." target="_blank"><i
+                                class="bi bi-whatsapp"></i> ¿Necesitas ayuda?</a></li>
                 </ul>
                 <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-body text-center" style="font-size: 18px;">
-                            <div class="d-flex justify-content-end">
-                                <button type="button" class="btn-close border-0" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                            </div>
-                            <div class="p-4">
-                                <p>Por tu seguridad, para solicitar la suspensión o la baja de tu servicio puedes comunicarte a los siguientes números:</p>
-                                <p><i class="bi bi-telephone"></i> 062-514798</p>
-                                <p><i class="bi bi-telephone"></i> 064-400818 </p>
-                                <p>O acertate al centro de experiencia mas cercano</p>
-                                <a href="/frontend/Views/CentrosDeExperiencia.html" class="btn btn-success rounded-pill px-5" onclick="redirectToRoute()">Aqui</a>
+                        <div class="modal-content">
+                            <div class="modal-body text-center" style="font-size: 18px;">
+                                <div class="d-flex justify-content-end">
+                                    <button type="button" class="btn-close border-0" data-bs-dismiss="modal"
+                                        aria-label="Cerrar"></button>
+                                </div>
+                                <div class="p-4">
+                                    <p>Por tu seguridad, para solicitar la suspensión o la baja de tu servicio puedes
+                                        comunicarte a los siguientes números:</p>
+                                    <p><i class="bi bi-telephone"></i> 062-514798</p>
+                                    <p><i class="bi bi-telephone"></i> 064-400818 </p>
+                                    <p>O acertate al centro de experiencia mas cercano</p>
+                                    <a href="/frontend/Views/CentrosDeExperiencia.html"
+                                        class="btn btn-success rounded-pill px-5" onclick="redirectToRoute()">Aqui</a>
+                                </div>
                             </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
-                <ul class="navbar-nav ms-auto px-3" style="justify-content: end;">
-                    <li class="nav-item dropdown" style="align-content: center;">
-                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="/frontend/Views/Internet.html">Internet</a></li>
-                          <li><a class="dropdown-item" href="/frontend/Views/Cable.html">Cable</a></li>
-                          <li><a class="dropdown-item" href="/Index.html">Dúos</a></li>
-                        </ul>
-                    </li>
-                    <li id="login" class="nav-item p-2">
-                        <a class="text-decoration-none" href="/frontend/Views/Register.html">
-                            <button>Iniciar sesión
-                                <div class="arrow-wrapper">
-                                    <div class="arrow"></div>   
-                                </div>
-                            </button>
-                        </a>
+                </div>
+                <ul class="navbar-nav ms-auto px-3" style="justify-content: end; align-items: center;">
+                    <li class="nav-link mx-3"><a class="text-white text-decoration-none"
+                            href="/frontend/Views/Cable.html">Ver Nuestro Catalogo de Canales <i
+                                class="bi bi-view-list"></i></a></li>
+                    <li class="nav-item p-1">
+                        <div class="tooltip-container">
+                            <span class="tooltip">Consulta tus recibos</span>
+                            <span class="text1 d-flex justify-content-center">¿Tus Recibos?<i class="bi bi-file-text mx-2"></i> </span>
+                            <span class="d-flex justify-content-center"><i class="bi bi-person-check mx-2"></i>Ingresar</span>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -143,4 +226,5 @@
     </nav>
     <script src="/frontend/Resources/Js/Dependencias.js"></script>
 </body>
+
 </html>
