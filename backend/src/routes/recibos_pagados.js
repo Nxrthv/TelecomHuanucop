@@ -34,7 +34,7 @@ WHERE
     (d.codigo_cobro IS NOT NULL AND trim(d.codigo_cobro) != '')
     AND cs.anulado = 'f'
     AND d.anulado = 'f'
-    AND d.fecha_ultimo_pago <= (DATE_TRUNC('month', CURRENT_DATE) + INTERVAL '1 MONTH - 1 DAY')
+    AND d.fecha_ultimo_pago <= (DATE_TRUNC('month', CURRENT_DATE) + INTERVAL '1 MONTH - 1 DAY')  
 	  AND d.codigo_abonado = $1
 ORDER BY
 	d.codigo_abonado ASC,
