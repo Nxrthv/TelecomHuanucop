@@ -2,224 +2,11 @@
     background: #e4d4f9;
 }
 
-
-/* Estilo adicional para los apartados */
-.tab-content>div {
+.tab-content > div {
     display: none;
 }
-
-.tab-content>.active {
+.tab-content > .active {
     display: block;
-}
-.channel-categories-wrapper {
-    background: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.channel-categories {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    border-bottom: none;
-    margin-bottom: 2rem;
-}
-
-.channel-categories .nav-link {
-    border-radius: 25px;
-    padding: 10px 20px;
-    color: #666;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease;
-}
-
-.channel-categories .nav-link.active {
-    background-color: #220052;
-    color: white;
-}
-
-.channel-categories .nav-link i {
-    font-size: 1.2rem;
-}
-
-.tab-item {
-    margin: 0;
-}
-
-.nav-pills .nav-link {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 20px;
-    color: #220052;
-    background: white;
-    border: 1px solid #220052;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    font-weight: 500;
-    min-width: 160px;
-    justify-content: center;
-}
-
-.nav-pills .nav-link i {
-    font-size: 1.2em;
-}
-
-.nav-pills .nav-link:hover {
-    background: #220052;
-    color: white;
-    transform: translateY(-2px);
-}
-
-.nav-pills .nav-link.active,
-.nav-pills .nav-link:focus {
-    background: #220052;
-    color: white;
-    border-color: #220052;
-    box-shadow: 0 4px 6px rgba(3, 45, 223, 0.2);
-}
-
-@media (max-width: 768px) {
-    .nav-pills .nav-link {
-        min-width: 140px;
-        padding: 10px 15px;
-    }
-}
-.item{
-    background: #220052;
-    width: auto;
-    border-radius: .5em;
-    margin: .1em;
-    text-align: center;
-}
-.item > a:hover{
-    background-color: #220052;
-    color: white;
-}
-.item > a{
-    color: white;
-}
-.nav{
-    margin: auto;   
-    display: flex;
-}
-
-.beneficios-section {
-    padding: 4rem 2rem;
-    background-color: #f0f2ff;
-}
-
-.beneficio-card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    height: 100%;
-    transition: transform 0.3s ease;
-    text-align: center;
-}
-
-.beneficio-card:hover {
-    transform: translateY(-5px);
-}
-
-.beneficio-imagen {
-    margin-bottom: 1.5rem;
-}
-
-.beneficio-imagen img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-}
-
-.beneficio-card h3 {
-    color: #220052;
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
-}
-
-.beneficio-card p {
-    color: #666;
-    font-size: 0.9rem;
-    line-height: 1.6;
-}
-
-/* Estilos base */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-.hero-section {
-    background-image: url('/frontend/Resources/Images/cable_fondo.jpeg');
-    background-size: cover;
-    background-position: center;
-    min-height: 700px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    margin-top: 0;
-    width: 100%;
-    padding-top: 76px;
-}
-
-.hero-content {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 2em;
-    border-radius: 30px;
-    width: 100%;
-    max-width: 800px;
-}
-
-.categoria {
-    background-color: #220052;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    cursor: default;
-    width: 12em;
-    margin: auto;
-    margin-bottom: .5em;
-}
-
-.canales-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    background-color: #f0f2ff;
-    border-radius: .5em;
-}
-
-.canal-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    font-weight: 500;
-    padding: 10px;
-    transition: transform 0.3s ease;
-}
-
-.canal-item:hover {
-    transform: scale(1.05);
-}
-
-.canal-item img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 130%;
-    height: auto;
-    margin-bottom: 10px;
 }
 .nav-pills {
     gap: 0.5rem;
@@ -258,163 +45,6 @@
 .nav-pills .tab-link i {
     margin-right: 0.5rem;
 }
-/* Estilos para dispositivos móviles */
-@media screen and (max-width: 480px) {
-    .canal-item img {
-        max-width: 100px;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    .canal-item img {
-        width: 100%;
-    }
-}
-
-.canal-item p {
-    font-size: clamp(0.8rem, 1.5vw, 1.1rem);
-}
-
-#btnInteresa {
-    padding: clamp(10px, 2vw, 12px) clamp(20px, 4vw, 30px);
-    background-color: #220052;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    font-size: clamp(0.9rem, 2vw, 1rem);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-#btnInteresa:hover {
-    background-color: #220052;
-    transform: scale(1.05);
-}
-
-.formulario-datos {
-    width: 90%;
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f0f2ff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.formulario-datos form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.formulario-datos form div {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.formulario-datos label {
-
-    text-align: left;
-    width: 100%;
-}
-
-.formulario-datos input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-.formulario-datos button {
-    padding: clamp(10px, 2vw, 12px) clamp(20px, 4vw, 30px);
-    background-color: #220052;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    font-size: clamp(0.9rem, 2vw, 1rem);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: 60%;
-    margin: 0 auto;
-    display: block;
-}
-
-.formulario-datos button:hover {
-    background-color: #220052;
-    transform: scale(1.05);
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .hero-section {
-        min-height: 400px;
-    }
-
-    .formulario-datos {
-        padding: 15px;
-    }
-
-    .categoria {
-        width: 95%;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-section {
-        min-height: 300px;
-    }
-
-    .canales-grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: 10px;
-    }
-
-    .formulario-datos form div {
-        margin-bottom: 10px;
-    }
-}
-
-.cobertura-options {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-.cobertura-btn {
-    background: #fff;
-    border: 2px solid #2C3E50;
-    border-radius: 10px;
-    padding: 15px 25px;
-    font-size: 16px;
-    color: #2C3E50;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.cobertura-btn:hover {
-    background: #2C3E50;
-    color: white;
-    transform: translateY(-2px);
-}
-
-.cobertura-btn i {
-    font-size: 20px;
-}
-
-.formulario-datos {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 800px;
-}
 
 .tab-list {
     display: flex;
@@ -425,17 +55,9 @@
     margin: 0;
 }
 
-.tab-item {
-    margin: 0.25rem;
-}
-
-
-
-/* Estilos para la cuadrícula de canales */
 .channels-container {
     padding: 20px;
 }
-
 .category-title {
     font-size: 1.8rem;
     color: #333;
@@ -443,14 +65,12 @@
     padding-bottom: 0.5rem;
     border-bottom: 2px solid #eee;
 }
-
 .channels-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
     padding: 15px;
 }
-
 .channel-card {
     background: white;
     border-radius: 10px;
@@ -462,11 +82,9 @@
     align-items: center;
     text-align: center;
 }
-
 .channel-card:hover {
     transform: translateY(-5px);
 }
-
 .channel-logo {
     width: 120px;
     height: 120px;
@@ -475,23 +93,19 @@
     justify-content: center;
     margin-bottom: 10px;
 }
-
 .channel-logo img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
 }
-
 .channel-info {
     width: 100%;
 }
-
 .channel-info h4 {
     font-size: 1rem;
     margin: 0;
     color: #333;
 }
-
 .channel-info span {
     font-size: 0.9rem;
     color: #666;
