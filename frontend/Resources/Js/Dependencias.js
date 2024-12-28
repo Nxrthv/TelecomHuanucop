@@ -14,13 +14,7 @@ document.head.appendChild(bootstrapScript);
 var bootstrapIconsLink = document.createElement('link');
 bootstrapIconsLink.href = 'https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css';
 bootstrapIconsLink.rel = 'stylesheet';
-document.head.appendChild(bootstrapIconsLink);
-
-// Cargar elements.js
-var elementsScript = document.createElement('script');
-elementsScript.src = '/frontend/Resources/Js/Elements.js';
-elementsScript.type = 'text/javascript';
-document.head.appendChild(elementsScript);
+document.head.appendChild(bootstrapIconsLink);  
 
 // Cargar jQuery
 var jqueryScript = document.createElement('script');

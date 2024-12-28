@@ -1,252 +1,304 @@
-:root{
-    --green: #198754;
-    --green0: #023336;
-    --green1: #c1e6ba;
-    --green2: #eaf8e7;
-    --green3: #00755c;
+:root {
+  --color1: #2a004ede;
+  --color2: #2a004e;
+  --color3: #2a004e;
+  --color4: #2a004e;
+  --color5: #2a004e;
 }
 
-body{
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 /* Rutas */
-.cont-user{
-    max-width: 25em;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
+.cont-user {
+  max-width: 25em;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 .buttons {
-    display: flex;
-    margin: auto;
-    top: 20px;
-    left: 20px;
+  display: flex;
+  margin: auto;
+  top: 20px;
+  left: 20px;
 }
-  
+
 .buttons button {
-    width: 150px;
-    height: 50px;
-    background-color: white;
-    margin: 20px;
-    color: var(--green);
-    position: relative;
-    overflow: hidden;
-    font-size: 14px;
-    letter-spacing: 1px;
-    font-weight: 500;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    border: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: 150px;
+  height: 50px;
+  background-color: white;
+  margin: 20px;
+  color: var(--color1);
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-  
-.buttons button:before, .buttons button:after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: var(--green1);
-    transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
-}
-  
-.buttons button:before {
-    right: 0;
-    top: 0;
-    transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
-}
-  
+
+.buttons button:before,
 .buttons button:after {
-    left: 0;
-    bottom: 0;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--color1);
+  transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
 }
-  
+
+.buttons button:before {
+  right: 0;
+  top: 0;
+  transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.buttons button:after {
+  left: 0;
+  bottom: 0;
+}
+
 .buttons button span {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    margin: 0;
-    padding: 0;
-    z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
 }
-  
-.buttons button span:before, .buttons button span:after {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 0;
-    background-color: var(--green1);
-    transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
-}
-  
-.buttons button span:before {
-    right: 0;
-    top: 0;
-    transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
-}
-  
+
+.buttons button span:before,
 .buttons button span:after {
-    left: 0;
-    bottom: 0;
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 0;
+  background-color: var(--color1);
+  transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
 }
-  
+
+.buttons button span:before {
+  right: 0;
+  top: 0;
+  transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.buttons button span:after {
+  left: 0;
+  bottom: 0;
+}
+
 .buttons button p {
-    padding: 0;
-    margin: 0;
-    transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
-    position: absolute;
-    width: 100%;
-    height: 100%;
+  padding: 0;
+  margin: 0;
+  transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
-  
-.buttons button p:before, .buttons button p:after {
-    position: absolute;
-    width: 100%;
-    transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
-    z-index: 1;
-    left: 0;
-}
-  
-.buttons button p:before {
-    content: attr(data-title);
-    top: 50%;
-    transform: translateY(-50%);
-}
-  
+
+.buttons button p:before,
 .buttons button p:after {
-    content: attr(data-text);
-    top: 150%;
-    color: var(--green3);
+  position: absolute;
+  width: 100%;
+  transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+  z-index: 1;
+  left: 0;
 }
-  
-.buttons button:hover:before, .buttons button:hover:after {
-    width: 100%;
+
+.buttons button p:before {
+  content: attr(data-title);
+  top: 50%;
+  transform: translateY(-50%);
 }
-  
+
+.buttons button p:after {
+  content: attr(data-text);
+  top: 150%;
+  color: var(--color1);
+}
+
+.buttons button:hover:before,
+.buttons button:hover:after {
+  width: 100%;
+}
+
 .buttons button:hover span {
-    z-index: 1;
+  z-index: 1;
 }
-  
-.buttons button:hover span:before, .buttons button:hover span:after {
-    height: 100%;
+
+.buttons button:hover span:before,
+.buttons button:hover span:after {
+  height: 100%;
 }
-  
+
 .buttons button:hover p:before {
-    top: -50%;
-    transform: rotate(5deg);
+  top: -50%;
+  transform: rotate(5deg);
 }
-  
+
 .buttons button:hover p:after {
-    top: 50%;
-    transform: translateY(-50%);
+  top: 50%;
+  transform: translateY(-50%);
 }
-  
+
 .buttons button.start {
-    background-color: var(--green);
-    box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.3);
-    transition: all 0.2s ease;
+  background-color: var(--color1);
+  box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
 }
-  
+
 .buttons button.start p:before {
-    top: -50%;
-    transform: rotate(5deg);
+  top: -50%;
+  transform: rotate(5deg);
 }
-  
+
 .buttons button.start p:after {
-    color: var(--green2);
-    transition: all 0s ease;
-    content: attr(data-start);
-    top: 50%;
-    transform: translateY(-50%);
-    animation: start 0.3s ease;
-    animation-fill-mode: forwards;
+  color: var(--color1);
+  transition: all 0s ease;
+  content: attr(data-start);
+  top: 50%;
+  transform: translateY(-50%);
+  animation: start 0.3s ease;
+  animation-fill-mode: forwards;
 }
-  
+
 @keyframes start {
-    from {
-        top: -50%;
-    }
-    to {
-        top: 50%;
-    }
+  from {
+    top: -50%;
+  }
+  to {
+    top: 50%;
+  }
 }
-  
-.buttons button.start:hover:before, .buttons button.start:hover:after {
-    display: none;
+
+.buttons button.start:hover:before,
+.buttons button.start:hover:after {
+  display: none;
 }
-  
+
 .buttons button.start:hover span {
-    display: none;
+  display: none;
 }
-  
+
 .buttons button:active {
-    outline: none;
-    border: none;
-    transform: translateY(1px);
+  outline: none;
+  border: none;
+  transform: translateY(1px);
 }
-  
+
 .buttons button:focus {
-    outline: 0;
-    box-shadow: 0 0 0 3px var(--green1);
+  outline: 0;
+  box-shadow: 0 0 0 3px var(--color1);
 }
 
 /* Promociones */
-.d-item{
-    max-height: 600px;
+.d-item {
+  max-height: 600px;
 }
-.d-img{
-    height: 100%;
+.d-img {
+  height: 100%;
 }
 
-.cont{
+.cont {
   min-width: 95%;
   display: flex;
   padding: auto;
   justify-content: center;
 }
+.promo {
+  border-radius: 1em;
+  background: var(--color1);
+  padding: 1.5em;
+  color: white;
+}
+.internet {
+  border-radius: 1em;
+  background: var(--color1);
+  padding: 1.5em;
+  color: white;
+  width: 270px;
+  min-height: 450px;
+}
+.color1 {
+  color: #2a004e;
+}
+.canales {
+  font-size: 20px;
+}
+.promo > button {
+  transition: ease 0.3s;
+}
+.promo > button:hover {
+  transform: scale(102%);
+  transition: ease 0.3s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.301);
+}
 
-#cont-promociones > .card{
-    border: 0;
-    border-radius: 1em;
-    width: 14em;
-    background: var(--green3);
-    padding: 1.5em;
-    color: white;
+/*Internet - Cable*/
+.tab-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #666;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    transition: all 0.3s ease;
 }
-.card > button{
-    transition: ease .3s;
+.tab-link:hover {
+    background-color: #f8f9fa;
+    color: #333;
 }
-.card > button:hover{
-    transform: scale(102%);
-    transition: ease .3s;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.301);
+.tab-link.active {
+    background-color: #2a004e;
+    color: #fff;
+}
+.w-card{
+    min-width: 280px;
+}
+.div-responsive {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 10px;
+}
+.tab-content > div {
+  display: none;
+}
+.tab-content > .active {
+  display: block;
 }
 
 /* Metodos de Pago */
-#plataformas{
-    z-index: 10;
-    width: 100px;
-    transition: ease-in-out .3s;
-    cursor: pointer;
+#plataformas {
+  z-index: 10;
+  width: 100px;
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
 }
-#plataformas:hover{
-    transform: scale(110%);
-    transition: ease-in-out .3s;
+#plataformas:hover {
+  transform: scale(110%);
+  transition: ease-in-out 0.3s;
 }
 
 .cookieCard {
   width: 400px;
   height: 200px;
   border-radius: 1em;
-  background: linear-gradient(to right,var(--green),var(--green3));
+  background: linear-gradient(to right, var(--color1), var(--color1));
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -260,7 +312,7 @@ body{
   width: 150px;
   height: 150px;
   content: "";
-  background: linear-gradient(to right,var(--green3),var(--green1));
+  background: linear-gradient(to right, var(--color1), var(--color1));
   position: absolute;
   z-index: 1;
   border-radius: 50%;
@@ -287,8 +339,8 @@ body{
 
 .acceptButton {
   padding: 11px 20px;
-  background-color: var(--green);
-  transition-duration: .2s;
+  background-color: var(--color1);
+  transition-duration: 0.2s;
   border: none;
   color: rgb(241, 241, 241);
   cursor: pointer;
@@ -296,12 +348,12 @@ body{
 }
 
 .acceptButton:hover {
-  background-color: var(--green3);
-  transition-duration: .2s;
+  background-color: var(--color1);
+  transition-duration: 0.2s;
 }
 
 /* Botones Emergentes */
-.btn-emergente{
+.btn-emergente {
   display: flex;
   position: fixed;
   z-index: 1000;
@@ -320,13 +372,13 @@ body{
   border-radius: 50%;
   overflow: hidden;
   position: relative;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
 }
 /* plus sign */
 .sign {
   width: 100%;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -341,24 +393,24 @@ body{
   right: 0%;
   width: 100%;
   opacity: 0;
-  font-weight: bold ;
+  font-weight: bold;
   color: white;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
 }
 .btn-span:hover {
   width: 250px;
   border-radius: 40px;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
 }
 
 .btn-span:hover .sign {
   width: 20%;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   padding-left: 20px;
 }
 .btn-span:hover .text {
   opacity: 1;
   width: 80%;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   padding: 10px;
 }

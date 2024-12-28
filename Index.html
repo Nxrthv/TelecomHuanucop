@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/frontend/Css/Index.css">
     <link rel="stylesheet" href="/frontend/Css/Loading.css">
-    <link rel="shortcut icon" href="/frontend/Resources/Images/logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/frontend/Resources/Images/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>TELEINCA S.A.C.</title>
+    <title>HUANUCO TELECOM S.A.C.</title>
 </head>
 
 <body>
@@ -22,10 +22,12 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active d-item">
-                <img src="/frontend/Resources/Images/promos.jpeg" class="d-block w-100 img-fluid" alt="slider 1">
+                <img src="https://americanet.pe/wp-content/uploads/2021/11/BANNER-WEB-PLAN-PRIME-2.jpg"
+                    class="d-block w-100 img-fluid" alt="slider 1">
             </div>
             <div class="carousel-item d-item">
-                <img src="/frontend/Resources/Images/promos2.jpeg" class="d-block w-100 img-fluid" alt="slider 2">
+                <img src="https://americanet.pe/wp-content/uploads/2021/11/BANNER-WEB-PLAN-500-1.jpg"
+                    class="d-block w-100 img-fluid" alt="slider 2">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
@@ -40,151 +42,575 @@
         </button>
     </div>
     <section id="promociones">
-        <h1 class="mt-5 text-center display-6">Nuestras Promociones</h1>
+        <h1 class="mt-5 text-center display-6">Escoge el que mas te guste</h1>
         <div class="cont-user">
             <div class="buttons">
-                <a href="/frontend/Views/Internet.html"><button><span></span>
-                        <p data-start="good luck!" data-text="Contratar" data-title="Solo Internet"></p>
-                    </button></a>
+                <button onclick="smoothScrollTo('internet-cable')"><span></span>
+                    <p data-start="good luck!" data-text="Contratar" data-title="Solo Internet"></p>
+                </button>
             </div>
             <div class="buttons">
-                <a href="/frontend/Views/Cable.html"><button><span></span>
-                        <p data-start="good luck!" data-text="Contratar" data-title="Solo Cable"></p>
-                    </button></a>
+                <button onclick="smoothScrollTo('internet-cable')"><span></span>
+                    <p data-start="good luck!" data-text="Contratar" data-title="Solo Cable"></p>
+                </button>
             </div>
         </div>
         <div id="cont-promociones" class="d-flex flex-wrap justify-content-center text-center">
-            <div id="promo0" class="col-sm-6 m-1 mb-sm-0 card justify-content-center">
-                <p id="paquete" class="card-text">Internet + Cable</p>
-                <div class="card-card bg-white p-0 m-0" style="color: #198754; border-radius: .5em;">
-                    <p id="velocidad" style="font-size: 2em; margin-top: 5px; margin-bottom: -5px;">
-                        <strong>80</strong><small style="font-size: 20px;">Mbps</small>
-                    </p>
-                    <p style="font-size: 12px;">de velocidad de estables</p>
-                </div>
-                <div class="card-text bg-white p-0" style="margin-top: .5em; color: #198754; border-radius: .5em;">
-                    <p id="cable" class="py-2 m-0" style="font-size: 15px;">+70 Canales en HD</p>
-                </div>
-                <p id="precio" style="margin-bottom: -.5em;" class="mt-4"><small
-                        style="font-size: 15px;">S/.</small><strong style="font-size: 2em;">90.00</strong></p>
-                <p class="card-text fw-light m-0 p-0 mb-4" style="font-size: 14px;">Precio Regular</p>
-                <button class="border-0 btn btn-primary bg-white fw-bold py-2 w-75 mx-auto mt-2"
-                    style="color: #198754; border-radius: 2em;" onclick="sendMessage('promo0')">Lo quiero</button>
-                <span style="font-size: 10px; margin-top: 15px;">Promocion valida solo para Huanuco, Paucarbamba y
-                    Cayhuayna*</span>
-            </div>
-            <div id="promo1" class="col-sm-6 m-1 mb-sm-0 card justify-content-center">
-                <p id="paquete" class="card-text">Internet + Cable</p>
-                <div id="internet" class="card-card bg-white p-0 m-0" style="color: #198754; border-radius: .5em;">
+            <div id="promo0" class="row col-8 col-lg-3 promo m-2 justify-content-center">
+                <p id="paquete" class="card-text">Internet + Cable por Fibra Optica</p>
+                <div class="bg-white p-0 m-0 color1" style="border-radius: .5em;">
                     <p id="velocidad" style="font-size: 2em; margin-top: 5px; margin-bottom: -5px;">
                         <strong>100</strong><small style="font-size: 20px;">Mbps</small>
                     </p>
-                    <p style="font-size: 12px;">de velocidad de estables</p>
+                    <p style="font-size: 14px;">de velocidad de estables</p>
                 </div>
-                <div class="card-text bg-white p-0" style="margin-top: .5em; color: #198754; border-radius: .5em;">
-                    <p id="cable" class="py-2 m-0" style="font-size: 15px;">+70 Canales en HD</p>
+                <div class="card-text bg-white p-0" style="margin-top: .5em; border-radius: .5em;">
+                    <p id="cable" class="py-2 m-0 color1 canales">+70 Canales en HD</p>
                 </div>
                 <p id="precio" style="margin-bottom: -.5em;" class="mt-4"><small
                         style="font-size: 15px;">S/.</small><strong style="font-size: 2em;">100.00</strong></p>
                 <p class="card-text fw-light m-0 p-0 mb-4" style="font-size: 14px;">Precio Regular</p>
-                <button class="border-0 btn btn-primary bg-white fw-bold py-2 w-75 mx-auto mt-2"
-                    style="color: #198754; border-radius: 2em;" onclick="sendMessage('promo1')">Lo quiero</button>
-                <span style="font-size: 10px; margin-top: 15px;">Promocion valida solo para Huanuco, Paucarbamba y
-                    Cayhuayna*</span>
-
+                <ul class="text-start w-75 list-unstyled" style="font-size: 14px;">
+                    <li><i class="bi bi-check2"></i> Instalacion Gratuita</li>
+                    <li><i class="bi bi-check2"></i> Conexion a 2 TVs</li>
+                    <li><i class="bi bi-check2"></i> Tv en vivo: deportes, series y películas</li>
+                </ul>
+                <button class="border-0 bg-white fw-bold py-2 w-75 mx-auto mt-2 color1" style="border-radius: 2em;"
+                    onclick="sendMessage('promo0')">Lo quiero</button>
+                <span style="font-size: 10px;" class="mt-4">Promocion valida solo para Los Portales, San Andreas, La
+                    Esperanza, Huayopampa, Jancao, Llicua Alt (Parcial), Fonavi II, La Colectora.*</span>
             </div>
-            <div id="promo2" class="col-sm-6 m-1 mb-sm-0 card justify-content-center">
-                <p id="paquete" class="card-text">Internet + Cable</p>
-                <div class="card-card bg-white p-0 m-0" style="color: #198754; border-radius: .5em;">
+            <div id="promo0" class="row col-8 col-lg-3 promo m-2 justify-content-center">
+                <p id="paquete" class="card-text">Internet + Cable por Fibra Optica</p>
+                <div class="bg-white p-0 m-0 color1" style="border-radius: .5em;">
                     <p id="velocidad" style="font-size: 2em; margin-top: 5px; margin-bottom: -5px;">
                         <strong>150</strong><small style="font-size: 20px;">Mbps</small>
                     </p>
-                    <p style="font-size: 12px;">de velocidad de estables</p>
+                    <p style="font-size: 14px;">de velocidad de estables</p>
                 </div>
-                <div class="card-text bg-white p-0" style="margin-top: .5em; color: #198754; border-radius: .5em;">
-                    <p id="cable" class="py-2 m-0" style="font-size: 15px;">+70 Canales en HD</p>
+                <div class="card-text bg-white p-0" style="margin-top: .5em; border-radius: .5em;">
+                    <p id="cable" class="py-2 m-0 color1 canales">+70 Canales en HD</p>
                 </div>
                 <p id="precio" style="margin-bottom: -.5em;" class="mt-4"><small
                         style="font-size: 15px;">S/.</small><strong style="font-size: 2em;">110.00</strong></p>
                 <p class="card-text fw-light m-0 p-0 mb-4" style="font-size: 14px;">Precio Regular</p>
-                <button class="border-0 btn btn-primary bg-white fw-bold py-2 w-75 mx-auto mt-2"
-                    style="color: #198754; border-radius: 2em;" onclick="sendMessage('promo2')">Lo quiero</button>
-                <span style="font-size: 10px; margin-top: 15px;">Promocion valida solo para Huanuco, Paucarbamba y
-                    Cayhuayna*</span>
+                <ul class="text-start w-75 list-unstyled" style="font-size: 14px;">
+                    <li><i class="bi bi-check2"></i> Instalacion Gratuita</li>
+                    <li><i class="bi bi-check2"></i> Conexion a 2 TVs</li>
+                    <li><i class="bi bi-check2"></i> Tv en vivo: deportes, series y películas</li>
+                </ul>
+                <button class="border-0 bg-white fw-bold py-2 w-75 mx-auto mt-2 color1" style="border-radius: 2em;"
+                    onclick="sendMessage('promo0')">Lo quiero</button>
+                <span style="font-size: 10px;" class="mt-4">Promocion valida solo para Los Portales, San Andreas, La
+                    Esperanza, Huayopampa, Jancao, Llicua Alt (Parcial), Fonavi II, La Colectora.*</span>
             </div>
-            <div id="promo3" class="col-sm-6 m-1 mb-sm-0 card justify-content-center">
-                <p id="paquete" class="card-text">Internet + Cable</p>
-                <div class="card-card bg-white p-0 m-0" style="color: #198754; border-radius: .5em;">
-                    <p id="velocidad" style="font-size: 2em; margin-top: 5px; margin-bottom: -5px;">
+            <div id="promo0" class="row col-8 col-lg-4 promo m-2 justify-content-center">
+                <p id="paquete" class="card-text">Internet + Cable por Fibra Optica</p>
+                <div class="bg-white p-0 m-0 color1" style="border-radius: .5em;">
+                    <p id="velocidad" style="font-size: 3em; margin-top: 5px; margin-bottom: -5px;">
                         <strong>200</strong><small style="font-size: 20px;">Mbps</small>
                     </p>
-                    <p style="font-size: 12px;">de velocidad de estables</p>
+                    <p style="font-size: 16px;">de velocidad de estables</p>
                 </div>
-                <div class="card-text bg-white p-0" style="margin-top: .5em; color: #198754; border-radius: .5em;">
-                    <p id="cable" class="py-2 m-0" style="font-size: 15px;">+70 Canales en HD</p>
+                <div class="card-text bg-white p-0" style="margin-top: .5em; border-radius: .5em;">
+                    <p id="cable" class="py-2 m-0 color1 canales">+70 Canales en HD</p>
                 </div>
                 <p id="precio" style="margin-bottom: -.5em;" class="mt-4"><small
                         style="font-size: 15px;">S/.</small><strong style="font-size: 2em;">130.00</strong></p>
                 <p class="card-text fw-light m-0 p-0 mb-4" style="font-size: 14px;">Precio Regular</p>
-                <button class="border-0 btn btn-primary bg-white fw-bold py-2 w-75 mx-auto mt-2"
-                    style="color: #198754; border-radius: 2em;" onclick="sendMessage('promo3')">Lo quiero</button>
-                <span style="font-size: 10px; margin-top: 15px;">Promocion valida solo para Huanuco, Paucarbamba y
-                    Cayhuayna*</span>
+                <ul class="text-start w-75 list-unstyled" style="font-size: 14px;">
+                    <li><i class="bi bi-check2"></i> Instalacion Gratuita</li>
+                    <li><i class="bi bi-check2"></i> Conexion a 2 TVs</li>
+                    <li><i class="bi bi-check2"></i> Tv en vivo: deportes, series y películas</li>
+                </ul>
+                <button class="border-0 bg-white fw-bold py-2 w-75 mx-auto mt-2 color1" style="border-radius: 2em;"
+                    onclick="sendMessage('promo0')">Lo quiero</button>
+                <span style="font-size: 10px;" class="mt-4">Promocion valida solo para Los Portales, San Andreas, La
+                    Esperanza, Huayopampa, Jancao, Llicua Alt (Parcial), Fonavi II, La Colectora.*</span>
             </div>
-            <div id="promo4" class="col-sm-6 m-1 mb-sm-0 card justify-content-center">
-                <p id="paquete" class="card-text">Internet + Cable</p>
-                <div class="card-card bg-white p-0 m-0" style="color: #198754; border-radius: .5em;">
-                    <p id="velocidad" style="font-size: 2em; margin-top: 5px; margin-bottom: -5px;">
-                        <strong>250</strong><small style="font-size: 20px;">Mbps</small>
+            <div id="promo0" class="row col-8 col-lg-4 promo m-2 justify-content-center">
+                <p id="paquete" class="card-text">Internet + Cable por Conexion Coaccial</p>
+                <div class="bg-white p-0 m-0 color1" style="border-radius: .5em;">
+                    <p id="velocidad" style="font-size: 3em; margin-top: 5px; margin-bottom: -5px;">
+                        <strong>40</strong><small style="font-size: 25px;">Mbps</small>
                     </p>
-                    <p style="font-size: 12px;">de velocidad de estables</p>
+                    <p style="font-size: 16px;">de velocidad de estables</p>
                 </div>
-                <div class="card-text bg-white p-0" style="margin-top: .5em; color: #198754; border-radius: .5em;">
-                    <p id="cable" class="py-2 m-0" style="font-size: 15px;">+70 Canales en HD</p>
+                <div class="card-text bg-white p-0" style="margin-top: .5em; border-radius: .5em;">
+                    <p id="cable" class="py-2 m-0 color1 canales">+70 Canales en HD</p>
                 </div>
                 <p id="precio" style="margin-bottom: -.5em;" class="mt-4"><small
-                        style="font-size: 15px;">S/.</small><strong style="font-size: 2em;">150.00</strong></p>
+                        style="font-size: 15px;">S/.</small><strong style="font-size: 2em;">115.00</strong></p>
                 <p class="card-text fw-light m-0 p-0 mb-4" style="font-size: 14px;">Precio Regular</p>
-                <button class="border-0 btn btn-primary bg-white fw-bold py-2 w-75 mx-auto mt-2"
-                    style="color: #198754; border-radius: 2em;" onclick="sendMessage('promo4')">Lo quiero</button>
-                <span style="font-size: 10px; margin-top: 15px;">Promocion valida solo para Huanuco, Paucarbamba y
-                    Cayhuayna*</span>
+                <ul class="text-start w-75 list-unstyled" style="font-size: 14px;">
+                    <li><i class="bi bi-check2"></i> Instalacion Gratuita</li>
+                    <li><i class="bi bi-check2"></i> Conexion a 2 TVs</li>
+                    <li><i class="bi bi-check2"></i> Tv en vivo: deportes, series y películas</li>
+                </ul>
+                <button class="border-0 bg-white fw-bold py-2 w-75 mx-auto mt-2 color1" style="border-radius: 2em;"
+                    onclick="sendMessage('promo0')">Lo quiero</button>
+                <span style="font-size: 10px;" class="mt-4">Promocion valida solo para Los Carrizales, Predio Tingo,
+                    Pucuchinche, Kotosh, Pillco Marca, Yacutoma, Colpa Baja y Huachog.*</span>
+            </div>
+            <div id="promo0" class="row col-8 col-lg-3 promo m-2 justify-content-center">
+                <p id="paquete" class="card-text">Internet + Cable por Conexion Coaccial</p>
+                <div class="bg-white p-0 m-0 color1" style="border-radius: .5em;">
+                    <p id="velocidad" style="font-size: 2em; margin-top: 5px; margin-bottom: -5px;">
+                        <strong>20</strong><small style="font-size: 20px;">Mbps</small>
+                    </p>
+                    <p style="font-size: 14px;">de velocidad de estables</p>
+                </div>
+                <div class="card-text bg-white p-0" style="margin-top: .5em; border-radius: .5em;">
+                    <p id="cable" class="py-2 m-0 color1 canales">+70 Canales en HD</p>
+                </div>
+                <p id="precio" style="margin-bottom: -.5em;" class="mt-4"><small
+                        style="font-size: 15px;">S/.</small><strong style="font-size: 2em;">105.00</strong></p>
+                <p class="card-text fw-light m-0 p-0 mb-4" style="font-size: 14px;">Precio Regular</p>
+                <ul class="text-start w-75 list-unstyled" style="font-size: 14px;">
+                    <li><i class="bi bi-check2"></i> Instalacion Gratuita</li>
+                    <li><i class="bi bi-check2"></i> Conexion a 2 TVs</li>
+                    <li><i class="bi bi-check2"></i> Tv en vivo: deportes, series y películas</li>
+                </ul>
+                <button class="border-0 bg-white fw-bold py-2 w-75 mx-auto mt-2 color1" style="border-radius: 2em;"
+                    onclick="sendMessage('promo0')">Lo quiero</button>
+                <span style="font-size: 10px;" class="mt-4">Promocion valida solo para Los Carrizales, Predio Tingo,
+                    Pucuchinche, Kotosh, Pillco Marca, Yacutoma, Colpa Baja y Huachog.*</span>
+            </div>
+            <div id="promo0" class="row col-8 col-lg-3 promo m-2 justify-content-center">
+                <p id="paquete" class="card-text">Internet + Cable por Conexion Coaccial</p>
+                <div class="bg-white p-0 m-0 color1" style="border-radius: .5em;">
+                    <p id="velocidad" style="font-size: 2em; margin-top: 5px; margin-bottom: -5px;">
+                        <strong>10</strong><small style="font-size: 20px;">Mbps</small>
+                    </p>
+                    <p style="font-size: 14px;">de velocidad de estables</p>
+                </div>
+                <div class="card-text bg-white p-0" style="margin-top: .5em; border-radius: .5em;">
+                    <p id="cable" class="py-2 m-0 color1 canales">+70 Canales en HD</p>
+                </div>
+                <p id="precio" style="margin-bottom: -.5em;" class="mt-4"><small
+                        style="font-size: 15px;">S/.</small><strong style="font-size: 2em;">90.00</strong></p>
+                <p class="card-text fw-light m-0 p-0 mb-4" style="font-size: 14px;">Precio Regular</p>
+                <ul class="text-start w-75 list-unstyled" style="font-size: 14px;">
+                    <li><i class="bi bi-check2"></i> Instalacion Gratuita</li>
+                    <li><i class="bi bi-check2"></i> Conexion a 2 TVs</li>
+                    <li><i class="bi bi-check2"></i> Tv en vivo: deportes, series y películas</li>
+                </ul>
+                <button class="border-0 bg-white fw-bold py-2 w-75 mx-auto mt-2 color1" style="border-radius: 2em;"
+                    onclick="sendMessage('promo0')">Lo quiero</button>
+                <span style="font-size: 10px;" class="mt-4">Promocion valida solo para Los Carrizales, Predio Tingo,
+                    Pucuchinche, Kotosh, Pillco Marca, Yacutoma, Colpa Baja y Huachog.*</span>
             </div>
         </div>
     </section>
-    <h1 class="my-5 text-center display-6" id="beneficios">Beneficios de Nuestros Servicios</h1>
-    <section class="container">
-        <div class="row my-4">
-            <div class="col-12 col-sm-6 col-md-4 mb-4">
-                <div class="card border-0">
-                    <img src="/frontend/Resources/Images/beneficio_icon/2.jpg" class="m-auto p-1" alt="">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Internet Estable</h5>
-                        <p class="card-text">Un internet estable de alta calidad y velocidad</p>
+    <section>
+        <ul class="nav nav-pills mt-4 justify-content-center" id="tabList" role="tablist">
+            <li class="tab-item tab-item">
+                <a class="tab-link active mx-2 rounded-pill" id="tab1" data-bs-toggle="pill" href="#content1" role="tab"
+                    aria-controls="content1" aria-selected="true">Internet</a>
+            </li>
+            <li class="tab-item tab">
+                <a class="tab-link mx-2 rounded-pill" id="tab2" data-bs-toggle="pill" href="#content2" role="tab"
+                    aria-controls="content2" aria-selected="false">Cable</a>
+            </li>
+        </ul>
+        <div class="tab-content mt-4" id="internet-cable">
+            <div class="p-lg-0 py-5 tab-pane fade show active" id="content1" role="tabpanel" aria-labelledby="tab1">
+                <p class="display-6 px-4">Internet</p>
+                <div class="d-flex div-responsive">
+                    <div id="promo0" class="row w-card promo m-2 justify-content-center text-center">
+                        <p id="paquete" class="card-text">Internet + Cable por Fibra Optica</p>
+                        <div class="bg-white p-0 m-0 color1" style="border-radius: .5em;">
+                            <p id="velocidad" style="font-size: 2em; margin-top: 5px; margin-bottom: -5px;">
+                                <strong>100</strong><small style="font-size: 20px;">Mbps</small>
+                            </p>
+                            <p style="font-size: 14px;">de velocidad de estables</p>
+                        </div>
+                        <div class="card-text bg-white p-0" style="margin-top: .5em; border-radius: .5em;">
+                            <p id="cable" class="py-2 m-0 color1 canales">+70 Canales en HD</p>
+                        </div>
+                        <p id="precio" style="margin-bottom: -.5em;" class="mt-4"><small
+                                style="font-size: 15px;">S/.</small><strong style="font-size: 2em;">100.00</strong></p>
+                        <p class="card-text fw-light m-0 p-0 mb-4" style="font-size: 14px;">Precio Regular</p>
+                        <ul class="text-start w-75 list-unstyled" style="font-size: 14px;">
+                            <li><i class="bi bi-check2"></i> Instalacion Gratuita</li>
+                            <li><i class="bi bi-check2"></i> Conexion a 2 TVs</li>
+                            <li><i class="bi bi-check2"></i> Tv en vivo: deportes, series y películas</li>
+                        </ul>
+                        <button class="border-0 bg-white fw-bold py-2 w-75 mx-auto mt-2 color1" style="border-radius: 2em;"
+                            onclick="sendMessage('promo0')">Lo quiero</button>
+                        <span style="font-size: 10px;" class="mt-4">Promocion valida solo para Los Portales, San Andreas, La
+                            Esperanza, Huayopampa, Jancao, Llicua Alt (Parcial), Fonavi II, La Colectora.*</span>
+                    </div>
+                    <div id="promo0" class="row w-card promo m-2 justify-content-center text-center">
+                        <p id="paquete" class="card-text">Internet + Cable por Fibra Optica</p>
+                        <div class="bg-white p-0 m-0 color1" style="border-radius: .5em;">
+                            <p id="velocidad" style="font-size: 2em; margin-top: 5px; margin-bottom: -5px;">
+                                <strong>100</strong><small style="font-size: 20px;">Mbps</small>
+                            </p>
+                            <p style="font-size: 14px;">de velocidad de estables</p>
+                        </div>
+                        <div class="card-text bg-white p-0" style="margin-top: .5em; border-radius: .5em;">
+                            <p id="cable" class="py-2 m-0 color1 canales">+70 Canales en HD</p>
+                        </div>
+                        <p id="precio" style="margin-bottom: -.5em;" class="mt-4"><small
+                                style="font-size: 15px;">S/.</small><strong style="font-size: 2em;">100.00</strong></p>
+                        <p class="card-text fw-light m-0 p-0 mb-4" style="font-size: 14px;">Precio Regular</p>
+                        <ul class="text-start w-75 list-unstyled" style="font-size: 14px;">
+                            <li><i class="bi bi-check2"></i> Instalacion Gratuita</li>
+                            <li><i class="bi bi-check2"></i> Conexion a 2 TVs</li>
+                            <li><i class="bi bi-check2"></i> Tv en vivo: deportes, series y películas</li>
+                        </ul>
+                        <button class="border-0 bg-white fw-bold py-2 w-75 mx-auto mt-2 color1" style="border-radius: 2em;"
+                            onclick="sendMessage('promo0')">Lo quiero</button>
+                        <span style="font-size: 10px;" class="mt-4">Promocion valida solo para Los Portales, San Andreas, La
+                            Esperanza, Huayopampa, Jancao, Llicua Alt (Parcial), Fonavi II, La Colectora.*</span>
+                    </div>
+                    <div id="promo0" class="row w-card promo m-2 justify-content-center text-center">
+                        <p id="paquete" class="card-text">Internet + Cable por Fibra Optica</p>
+                        <div class="bg-white p-0 m-0 color1" style="border-radius: .5em;">
+                            <p id="velocidad" style="font-size: 2em; margin-top: 5px; margin-bottom: -5px;">
+                                <strong>100</strong><small style="font-size: 20px;">Mbps</small>
+                            </p>
+                            <p style="font-size: 14px;">de velocidad de estables</p>
+                        </div>
+                        <div class="card-text bg-white p-0" style="margin-top: .5em; border-radius: .5em;">
+                            <p id="cable" class="py-2 m-0 color1 canales">+70 Canales en HD</p>
+                        </div>
+                        <p id="precio" style="margin-bottom: -.5em;" class="mt-4"><small
+                                style="font-size: 15px;">S/.</small><strong style="font-size: 2em;">100.00</strong></p>
+                        <p class="card-text fw-light m-0 p-0 mb-4" style="font-size: 14px;">Precio Regular</p>
+                        <ul class="text-start w-75 list-unstyled" style="font-size: 14px;">
+                            <li><i class="bi bi-check2"></i> Instalacion Gratuita</li>
+                            <li><i class="bi bi-check2"></i> Conexion a 2 TVs</li>
+                            <li><i class="bi bi-check2"></i> Tv en vivo: deportes, series y películas</li>
+                        </ul>
+                        <button class="border-0 bg-white fw-bold py-2 w-75 mx-auto mt-2 color1" style="border-radius: 2em;"
+                            onclick="sendMessage('promo0')">Lo quiero</button>
+                        <span style="font-size: 10px;" class="mt-4">Promocion valida solo para Los Portales, San Andreas, La
+                            Esperanza, Huayopampa, Jancao, Llicua Alt (Parcial), Fonavi II, La Colectora.*</span>
+                    </div>
+                    <div id="promo0" class="row w-card promo m-2 justify-content-center text-center">
+                        <p id="paquete" class="card-text">Internet + Cable por Fibra Optica</p>
+                        <div class="bg-white p-0 m-0 color1" style="border-radius: .5em;">
+                            <p id="velocidad" style="font-size: 2em; margin-top: 5px; margin-bottom: -5px;">
+                                <strong>100</strong><small style="font-size: 20px;">Mbps</small>
+                            </p>
+                            <p style="font-size: 14px;">de velocidad de estables</p>
+                        </div>
+                        <div class="card-text bg-white p-0" style="margin-top: .5em; border-radius: .5em;">
+                            <p id="cable" class="py-2 m-0 color1 canales">+70 Canales en HD</p>
+                        </div>
+                        <p id="precio" style="margin-bottom: -.5em;" class="mt-4"><small
+                                style="font-size: 15px;">S/.</small><strong style="font-size: 2em;">100.00</strong></p>
+                        <p class="card-text fw-light m-0 p-0 mb-4" style="font-size: 14px;">Precio Regular</p>
+                        <ul class="text-start w-75 list-unstyled" style="font-size: 14px;">
+                            <li><i class="bi bi-check2"></i> Instalacion Gratuita</li>
+                            <li><i class="bi bi-check2"></i> Conexion a 2 TVs</li>
+                            <li><i class="bi bi-check2"></i> Tv en vivo: deportes, series y películas</li>
+                        </ul>
+                        <button class="border-0 bg-white fw-bold py-2 w-75 mx-auto mt-2 color1" style="border-radius: 2em;"
+                            onclick="sendMessage('promo0')">Lo quiero</button>
+                        <span style="font-size: 10px;" class="mt-4">Promocion valida solo para Los Portales, San Andreas, La
+                            Esperanza, Huayopampa, Jancao, Llicua Alt (Parcial), Fonavi II, La Colectora.*</span>
+                    </div>
+                    <div id="promo0" class="row w-card promo m-2 justify-content-center text-center">
+                        <p id="paquete" class="card-text">Internet + Cable por Fibra Optica</p>
+                        <div class="bg-white p-0 m-0 color1" style="border-radius: .5em;">
+                            <p id="velocidad" style="font-size: 2em; margin-top: 5px; margin-bottom: -5px;">
+                                <strong>100</strong><small style="font-size: 20px;">Mbps</small>
+                            </p>
+                            <p style="font-size: 14px;">de velocidad de estables</p>
+                        </div>
+                        <div class="card-text bg-white p-0" style="margin-top: .5em; border-radius: .5em;">
+                            <p id="cable" class="py-2 m-0 color1 canales">+70 Canales en HD</p>
+                        </div>
+                        <p id="precio" style="margin-bottom: -.5em;" class="mt-4"><small
+                                style="font-size: 15px;">S/.</small><strong style="font-size: 2em;">100.00</strong></p>
+                        <p class="card-text fw-light m-0 p-0 mb-4" style="font-size: 14px;">Precio Regular</p>
+                        <ul class="text-start w-75 list-unstyled" style="font-size: 14px;">
+                            <li><i class="bi bi-check2"></i> Instalacion Gratuita</li>
+                            <li><i class="bi bi-check2"></i> Conexion a 2 TVs</li>
+                            <li><i class="bi bi-check2"></i> Tv en vivo: deportes, series y películas</li>
+                        </ul>
+                        <button class="border-0 bg-white fw-bold py-2 w-75 mx-auto mt-2 color1" style="border-radius: 2em;"
+                            onclick="sendMessage('promo0')">Lo quiero</button>
+                        <span style="font-size: 10px;" class="mt-4">Promocion valida solo para Los Portales, San Andreas, La
+                            Esperanza, Huayopampa, Jancao, Llicua Alt (Parcial), Fonavi II, La Colectora.*</span>
+                    </div>
+                    <div id="promo0" class="row w-card promo m-2 justify-content-center text-center">
+                        <p id="paquete" class="card-text">Internet + Cable por Fibra Optica</p>
+                        <div class="bg-white p-0 m-0 color1" style="border-radius: .5em;">
+                            <p id="velocidad" style="font-size: 2em; margin-top: 5px; margin-bottom: -5px;">
+                                <strong>100</strong><small style="font-size: 20px;">Mbps</small>
+                            </p>
+                            <p style="font-size: 14px;">de velocidad de estables</p>
+                        </div>
+                        <div class="card-text bg-white p-0" style="margin-top: .5em; border-radius: .5em;">
+                            <p id="cable" class="py-2 m-0 color1 canales">+70 Canales en HD</p>
+                        </div>
+                        <p id="precio" style="margin-bottom: -.5em;" class="mt-4"><small
+                                style="font-size: 15px;">S/.</small><strong style="font-size: 2em;">100.00</strong></p>
+                        <p class="card-text fw-light m-0 p-0 mb-4" style="font-size: 14px;">Precio Regular</p>
+                        <ul class="text-start w-75 list-unstyled" style="font-size: 14px;">
+                            <li><i class="bi bi-check2"></i> Instalacion Gratuita</li>
+                            <li><i class="bi bi-check2"></i> Conexion a 2 TVs</li>
+                            <li><i class="bi bi-check2"></i> Tv en vivo: deportes, series y películas</li>
+                        </ul>
+                        <button class="border-0 bg-white fw-bold py-2 w-75 mx-auto mt-2 color1" style="border-radius: 2em;"
+                            onclick="sendMessage('promo0')">Lo quiero</button>
+                        <span style="font-size: 10px;" class="mt-4">Promocion valida solo para Los Portales, San Andreas, La
+                            Esperanza, Huayopampa, Jancao, Llicua Alt (Parcial), Fonavi II, La Colectora.*</span>
+                    </div>
+                    <div id="promo0" class="row w-card promo m-2 justify-content-center text-center">
+                        <p id="paquete" class="card-text">Internet + Cable por Fibra Optica</p>
+                        <div class="bg-white p-0 m-0 color1" style="border-radius: .5em;">
+                            <p id="velocidad" style="font-size: 2em; margin-top: 5px; margin-bottom: -5px;">
+                                <strong>100</strong><small style="font-size: 20px;">Mbps</small>
+                            </p>
+                            <p style="font-size: 14px;">de velocidad de estables</p>
+                        </div>
+                        <div class="card-text bg-white p-0" style="margin-top: .5em; border-radius: .5em;">
+                            <p id="cable" class="py-2 m-0 color1 canales">+70 Canales en HD</p>
+                        </div>
+                        <p id="precio" style="margin-bottom: -.5em;" class="mt-4"><small
+                                style="font-size: 15px;">S/.</small><strong style="font-size: 2em;">100.00</strong></p>
+                        <p class="card-text fw-light m-0 p-0 mb-4" style="font-size: 14px;">Precio Regular</p>
+                        <ul class="text-start w-75 list-unstyled" style="font-size: 14px;">
+                            <li><i class="bi bi-check2"></i> Instalacion Gratuita</li>
+                            <li><i class="bi bi-check2"></i> Conexion a 2 TVs</li>
+                            <li><i class="bi bi-check2"></i> Tv en vivo: deportes, series y películas</li>
+                        </ul>
+                        <button class="border-0 bg-white fw-bold py-2 w-75 mx-auto mt-2 color1" style="border-radius: 2em;"
+                            onclick="sendMessage('promo0')">Lo quiero</button>
+                        <span style="font-size: 10px;" class="mt-4">Promocion valida solo para Los Portales, San Andreas, La
+                            Esperanza, Huayopampa, Jancao, Llicua Alt (Parcial), Fonavi II, La Colectora.*</span>
+                    </div>
+                    <div id="promo0" class="row w-card promo m-2 justify-content-center text-center">
+                        <p id="paquete" class="card-text">Internet + Cable por Fibra Optica</p>
+                        <div class="bg-white p-0 m-0 color1" style="border-radius: .5em;">
+                            <p id="velocidad" style="font-size: 2em; margin-top: 5px; margin-bottom: -5px;">
+                                <strong>100</strong><small style="font-size: 20px;">Mbps</small>
+                            </p>
+                            <p style="font-size: 14px;">de velocidad de estables</p>
+                        </div>
+                        <div class="card-text bg-white p-0" style="margin-top: .5em; border-radius: .5em;">
+                            <p id="cable" class="py-2 m-0 color1 canales">+70 Canales en HD</p>
+                        </div>
+                        <p id="precio" style="margin-bottom: -.5em;" class="mt-4"><small
+                                style="font-size: 15px;">S/.</small><strong style="font-size: 2em;">100.00</strong></p>
+                        <p class="card-text fw-light m-0 p-0 mb-4" style="font-size: 14px;">Precio Regular</p>
+                        <ul class="text-start w-75 list-unstyled" style="font-size: 14px;">
+                            <li><i class="bi bi-check2"></i> Instalacion Gratuita</li>
+                            <li><i class="bi bi-check2"></i> Conexion a 2 TVs</li>
+                            <li><i class="bi bi-check2"></i> Tv en vivo: deportes, series y películas</li>
+                        </ul>
+                        <button class="border-0 bg-white fw-bold py-2 w-75 mx-auto mt-2 color1" style="border-radius: 2em;"
+                            onclick="sendMessage('promo0')">Lo quiero</button>
+                        <span style="font-size: 10px;" class="mt-4">Promocion valida solo para Los Portales, San Andreas, La
+                            Esperanza, Huayopampa, Jancao, Llicua Alt (Parcial), Fonavi II, La Colectora.*</span>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 mb-4">
-                <div class="card border-0">
-                    <img src="/frontend/Resources/Images/beneficio_icon/1.jpg" class="m-auto p-1" alt="">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Descargar Ilimitadas</h5>
-                        <p class="card-text">Carga y descarga todo lo que quieras con la misma velocidad</p>
+            <div class="p-lg-0 py-5 tab-pane fade" id="content2" role="tabpanel" aria-labelledby="tab2">
+                <p class="display-6 px-4">Cable</p>
+                <div class="d-flex div-responsive">
+                    <div id="promo0" class="row w-card promo m-2 justify-content-center text-center">
+                        <p id="paquete" class="card-text">Internet + Cable por Fibra Optica</p>
+                        <div class="bg-white p-0 m-0 color1" style="border-radius: .5em;">
+                            <p id="velocidad" style="font-size: 2em; margin-top: 5px; margin-bottom: -5px;">
+                                <strong>100</strong><small style="font-size: 20px;">Mbps</small>
+                            </p>
+                            <p style="font-size: 14px;">de velocidad de estables</p>
+                        </div>
+                        <div class="card-text bg-white p-0" style="margin-top: .5em; border-radius: .5em;">
+                            <p id="cable" class="py-2 m-0 color1 canales">+70 Canales en HD</p>
+                        </div>
+                        <p id="precio" style="margin-bottom: -.5em;" class="mt-4"><small
+                                style="font-size: 15px;">S/.</small><strong style="font-size: 2em;">100.00</strong></p>
+                        <p class="card-text fw-light m-0 p-0 mb-4" style="font-size: 14px;">Precio Regular</p>
+                        <ul class="text-start w-75 list-unstyled" style="font-size: 14px;">
+                            <li><i class="bi bi-check2"></i> Instalacion Gratuita</li>
+                            <li><i class="bi bi-check2"></i> Conexion a 2 TVs</li>
+                            <li><i class="bi bi-check2"></i> Tv en vivo: deportes, series y películas</li>
+                        </ul>
+                        <button class="border-0 bg-white fw-bold py-2 w-75 mx-auto mt-2 color1" style="border-radius: 2em;"
+                            onclick="sendMessage('promo0')">Lo quiero</button>
+                        <span style="font-size: 10px;" class="mt-4">Promocion valida solo para Los Portales, San Andreas, La
+                            Esperanza, Huayopampa, Jancao, Llicua Alt (Parcial), Fonavi II, La Colectora.*</span>
                     </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 mb-4">
-                <div class="card border-0">
-                    <img src="/frontend/Resources/Images/beneficio_icon/3.jpg" class="m-auto p-2" alt="">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Multiples Conexiones</h5>
-                        <p class="card-text">Toda la familia conectada a alta velocidad y en toda la casa</p>
+                    <div id="promo0" class="row w-card promo m-2 justify-content-center text-center">
+                        <p id="paquete" class="card-text">Internet + Cable por Fibra Optica</p>
+                        <div class="bg-white p-0 m-0 color1" style="border-radius: .5em;">
+                            <p id="velocidad" style="font-size: 2em; margin-top: 5px; margin-bottom: -5px;">
+                                <strong>100</strong><small style="font-size: 20px;">Mbps</small>
+                            </p>
+                            <p style="font-size: 14px;">de velocidad de estables</p>
+                        </div>
+                        <div class="card-text bg-white p-0" style="margin-top: .5em; border-radius: .5em;">
+                            <p id="cable" class="py-2 m-0 color1 canales">+70 Canales en HD</p>
+                        </div>
+                        <p id="precio" style="margin-bottom: -.5em;" class="mt-4"><small
+                                style="font-size: 15px;">S/.</small><strong style="font-size: 2em;">100.00</strong></p>
+                        <p class="card-text fw-light m-0 p-0 mb-4" style="font-size: 14px;">Precio Regular</p>
+                        <ul class="text-start w-75 list-unstyled" style="font-size: 14px;">
+                            <li><i class="bi bi-check2"></i> Instalacion Gratuita</li>
+                            <li><i class="bi bi-check2"></i> Conexion a 2 TVs</li>
+                            <li><i class="bi bi-check2"></i> Tv en vivo: deportes, series y películas</li>
+                        </ul>
+                        <button class="border-0 bg-white fw-bold py-2 w-75 mx-auto mt-2 color1" style="border-radius: 2em;"
+                            onclick="sendMessage('promo0')">Lo quiero</button>
+                        <span style="font-size: 10px;" class="mt-4">Promocion valida solo para Los Portales, San Andreas, La
+                            Esperanza, Huayopampa, Jancao, Llicua Alt (Parcial), Fonavi II, La Colectora.*</span>
+                    </div>
+                    <div id="promo0" class="row w-card promo m-2 justify-content-center text-center">
+                        <p id="paquete" class="card-text">Internet + Cable por Fibra Optica</p>
+                        <div class="bg-white p-0 m-0 color1" style="border-radius: .5em;">
+                            <p id="velocidad" style="font-size: 2em; margin-top: 5px; margin-bottom: -5px;">
+                                <strong>100</strong><small style="font-size: 20px;">Mbps</small>
+                            </p>
+                            <p style="font-size: 14px;">de velocidad de estables</p>
+                        </div>
+                        <div class="card-text bg-white p-0" style="margin-top: .5em; border-radius: .5em;">
+                            <p id="cable" class="py-2 m-0 color1 canales">+70 Canales en HD</p>
+                        </div>
+                        <p id="precio" style="margin-bottom: -.5em;" class="mt-4"><small
+                                style="font-size: 15px;">S/.</small><strong style="font-size: 2em;">100.00</strong></p>
+                        <p class="card-text fw-light m-0 p-0 mb-4" style="font-size: 14px;">Precio Regular</p>
+                        <ul class="text-start w-75 list-unstyled" style="font-size: 14px;">
+                            <li><i class="bi bi-check2"></i> Instalacion Gratuita</li>
+                            <li><i class="bi bi-check2"></i> Conexion a 2 TVs</li>
+                            <li><i class="bi bi-check2"></i> Tv en vivo: deportes, series y películas</li>
+                        </ul>
+                        <button class="border-0 bg-white fw-bold py-2 w-75 mx-auto mt-2 color1" style="border-radius: 2em;"
+                            onclick="sendMessage('promo0')">Lo quiero</button>
+                        <span style="font-size: 10px;" class="mt-4">Promocion valida solo para Los Portales, San Andreas, La
+                            Esperanza, Huayopampa, Jancao, Llicua Alt (Parcial), Fonavi II, La Colectora.*</span>
+                    </div>
+                    <div id="promo0" class="row w-card promo m-2 justify-content-center text-center">
+                        <p id="paquete" class="card-text">Internet + Cable por Fibra Optica</p>
+                        <div class="bg-white p-0 m-0 color1" style="border-radius: .5em;">
+                            <p id="velocidad" style="font-size: 2em; margin-top: 5px; margin-bottom: -5px;">
+                                <strong>100</strong><small style="font-size: 20px;">Mbps</small>
+                            </p>
+                            <p style="font-size: 14px;">de velocidad de estables</p>
+                        </div>
+                        <div class="card-text bg-white p-0" style="margin-top: .5em; border-radius: .5em;">
+                            <p id="cable" class="py-2 m-0 color1 canales">+70 Canales en HD</p>
+                        </div>
+                        <p id="precio" style="margin-bottom: -.5em;" class="mt-4"><small
+                                style="font-size: 15px;">S/.</small><strong style="font-size: 2em;">100.00</strong></p>
+                        <p class="card-text fw-light m-0 p-0 mb-4" style="font-size: 14px;">Precio Regular</p>
+                        <ul class="text-start w-75 list-unstyled" style="font-size: 14px;">
+                            <li><i class="bi bi-check2"></i> Instalacion Gratuita</li>
+                            <li><i class="bi bi-check2"></i> Conexion a 2 TVs</li>
+                            <li><i class="bi bi-check2"></i> Tv en vivo: deportes, series y películas</li>
+                        </ul>
+                        <button class="border-0 bg-white fw-bold py-2 w-75 mx-auto mt-2 color1" style="border-radius: 2em;"
+                            onclick="sendMessage('promo0')">Lo quiero</button>
+                        <span style="font-size: 10px;" class="mt-4">Promocion valida solo para Los Portales, San Andreas, La
+                            Esperanza, Huayopampa, Jancao, Llicua Alt (Parcial), Fonavi II, La Colectora.*</span>
+                    </div>
+                    <div id="promo0" class="row w-card promo m-2 justify-content-center text-center">
+                        <p id="paquete" class="card-text">Internet + Cable por Fibra Optica</p>
+                        <div class="bg-white p-0 m-0 color1" style="border-radius: .5em;">
+                            <p id="velocidad" style="font-size: 2em; margin-top: 5px; margin-bottom: -5px;">
+                                <strong>100</strong><small style="font-size: 20px;">Mbps</small>
+                            </p>
+                            <p style="font-size: 14px;">de velocidad de estables</p>
+                        </div>
+                        <div class="card-text bg-white p-0" style="margin-top: .5em; border-radius: .5em;">
+                            <p id="cable" class="py-2 m-0 color1 canales">+70 Canales en HD</p>
+                        </div>
+                        <p id="precio" style="margin-bottom: -.5em;" class="mt-4"><small
+                                style="font-size: 15px;">S/.</small><strong style="font-size: 2em;">100.00</strong></p>
+                        <p class="card-text fw-light m-0 p-0 mb-4" style="font-size: 14px;">Precio Regular</p>
+                        <ul class="text-start w-75 list-unstyled" style="font-size: 14px;">
+                            <li><i class="bi bi-check2"></i> Instalacion Gratuita</li>
+                            <li><i class="bi bi-check2"></i> Conexion a 2 TVs</li>
+                            <li><i class="bi bi-check2"></i> Tv en vivo: deportes, series y películas</li>
+                        </ul>
+                        <button class="border-0 bg-white fw-bold py-2 w-75 mx-auto mt-2 color1" style="border-radius: 2em;"
+                            onclick="sendMessage('promo0')">Lo quiero</button>
+                        <span style="font-size: 10px;" class="mt-4">Promocion valida solo para Los Portales, San Andreas, La
+                            Esperanza, Huayopampa, Jancao, Llicua Alt (Parcial), Fonavi II, La Colectora.*</span>
+                    </div>
+                    <div id="promo0" class="row w-card promo m-2 justify-content-center text-center">
+                        <p id="paquete" class="card-text">Internet + Cable por Fibra Optica</p>
+                        <div class="bg-white p-0 m-0 color1" style="border-radius: .5em;">
+                            <p id="velocidad" style="font-size: 2em; margin-top: 5px; margin-bottom: -5px;">
+                                <strong>100</strong><small style="font-size: 20px;">Mbps</small>
+                            </p>
+                            <p style="font-size: 14px;">de velocidad de estables</p>
+                        </div>
+                        <div class="card-text bg-white p-0" style="margin-top: .5em; border-radius: .5em;">
+                            <p id="cable" class="py-2 m-0 color1 canales">+70 Canales en HD</p>
+                        </div>
+                        <p id="precio" style="margin-bottom: -.5em;" class="mt-4"><small
+                                style="font-size: 15px;">S/.</small><strong style="font-size: 2em;">100.00</strong></p>
+                        <p class="card-text fw-light m-0 p-0 mb-4" style="font-size: 14px;">Precio Regular</p>
+                        <ul class="text-start w-75 list-unstyled" style="font-size: 14px;">
+                            <li><i class="bi bi-check2"></i> Instalacion Gratuita</li>
+                            <li><i class="bi bi-check2"></i> Conexion a 2 TVs</li>
+                            <li><i class="bi bi-check2"></i> Tv en vivo: deportes, series y películas</li>
+                        </ul>
+                        <button class="border-0 bg-white fw-bold py-2 w-75 mx-auto mt-2 color1" style="border-radius: 2em;"
+                            onclick="sendMessage('promo0')">Lo quiero</button>
+                        <span style="font-size: 10px;" class="mt-4">Promocion valida solo para Los Portales, San Andreas, La
+                            Esperanza, Huayopampa, Jancao, Llicua Alt (Parcial), Fonavi II, La Colectora.*</span>
+                    </div>
+                    <div id="promo0" class="row w-card promo m-2 justify-content-center text-center">
+                        <p id="paquete" class="card-text">Internet + Cable por Fibra Optica</p>
+                        <div class="bg-white p-0 m-0 color1" style="border-radius: .5em;">
+                            <p id="velocidad" style="font-size: 2em; margin-top: 5px; margin-bottom: -5px;">
+                                <strong>100</strong><small style="font-size: 20px;">Mbps</small>
+                            </p>
+                            <p style="font-size: 14px;">de velocidad de estables</p>
+                        </div>
+                        <div class="card-text bg-white p-0" style="margin-top: .5em; border-radius: .5em;">
+                            <p id="cable" class="py-2 m-0 color1 canales">+70 Canales en HD</p>
+                        </div>
+                        <p id="precio" style="margin-bottom: -.5em;" class="mt-4"><small
+                                style="font-size: 15px;">S/.</small><strong style="font-size: 2em;">100.00</strong></p>
+                        <p class="card-text fw-light m-0 p-0 mb-4" style="font-size: 14px;">Precio Regular</p>
+                        <ul class="text-start w-75 list-unstyled" style="font-size: 14px;">
+                            <li><i class="bi bi-check2"></i> Instalacion Gratuita</li>
+                            <li><i class="bi bi-check2"></i> Conexion a 2 TVs</li>
+                            <li><i class="bi bi-check2"></i> Tv en vivo: deportes, series y películas</li>
+                        </ul>
+                        <button class="border-0 bg-white fw-bold py-2 w-75 mx-auto mt-2 color1" style="border-radius: 2em;"
+                            onclick="sendMessage('promo0')">Lo quiero</button>
+                        <span style="font-size: 10px;" class="mt-4">Promocion valida solo para Los Portales, San Andreas, La
+                            Esperanza, Huayopampa, Jancao, Llicua Alt (Parcial), Fonavi II, La Colectora.*</span>
+                    </div>
+                    <div id="promo0" class="row w-card promo m-2 justify-content-center text-center">
+                        <p id="paquete" class="card-text">Internet + Cable por Fibra Optica</p>
+                        <div class="bg-white p-0 m-0 color1" style="border-radius: .5em;">
+                            <p id="velocidad" style="font-size: 2em; margin-top: 5px; margin-bottom: -5px;">
+                                <strong>100</strong><small style="font-size: 20px;">Mbps</small>
+                            </p>
+                            <p style="font-size: 14px;">de velocidad de estables</p>
+                        </div>
+                        <div class="card-text bg-white p-0" style="margin-top: .5em; border-radius: .5em;">
+                            <p id="cable" class="py-2 m-0 color1 canales">+70 Canales en HD</p>
+                        </div>
+                        <p id="precio" style="margin-bottom: -.5em;" class="mt-4"><small
+                                style="font-size: 15px;">S/.</small><strong style="font-size: 2em;">100.00</strong></p>
+                        <p class="card-text fw-light m-0 p-0 mb-4" style="font-size: 14px;">Precio Regular</p>
+                        <ul class="text-start w-75 list-unstyled" style="font-size: 14px;">
+                            <li><i class="bi bi-check2"></i> Instalacion Gratuita</li>
+                            <li><i class="bi bi-check2"></i> Conexion a 2 TVs</li>
+                            <li><i class="bi bi-check2"></i> Tv en vivo: deportes, series y películas</li>
+                        </ul>
+                        <button class="border-0 bg-white fw-bold py-2 w-75 mx-auto mt-2 color1" style="border-radius: 2em;"
+                            onclick="sendMessage('promo0')">Lo quiero</button>
+                        <span style="font-size: 10px;" class="mt-4">Promocion valida solo para Los Portales, San Andreas, La
+                            Esperanza, Huayopampa, Jancao, Llicua Alt (Parcial), Fonavi II, La Colectora.*</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <h1 class="text-center display-6 my-5" id="pagos">Formas de Pago</h1>
+    <h1 class="text-center display-6 my-lg-5" id="pagos">Formas de Pago</h1>
     <section class="container my-5">
         <div class="d-flex justify-content-evenly">
             <div>
@@ -234,26 +660,12 @@
                 <div class="text">Llamanos al 062-514798</div>
             </button>
         </a>
-
-
-
-
-        <!-- Boton de WhatsApp
-        <a  class="whatsapp-btn m-1 hover-expand"
-            style="text-decoration: none; color: white;" title="Contactar por WhatsApp">
-            <span><i class="bi bi-whatsapp"></i></span>
-            <span>Llámanos a +1 234 567 890</span>
-        </a>
-        Boton de Llamanos
-        <a href="tel:062-514798" target="_blank" class="llamar-btn m-1" style="text-decoration: none; color: white;"
-            title="Contactar por WhatsApp">
-            <i class="bi bi-telephone"></i>
-        </a> -->
     </div>
     <div id="contFoot"></div>
     <script src="/frontend/Resources/Js/Dependencias.js"></script>
     <script src="/frontend/Resources/Js/Functions.js"></script>
     <script src="/frontend/Resources/Js/Elements.js"></script>
+    
 </body>
 
 </html>

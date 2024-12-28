@@ -49,3 +49,5 @@ window.addEventListener("load", () => {
         content.style.display = "block";
     }, 1000);
 });
+
+//Ver Internet y Cable
