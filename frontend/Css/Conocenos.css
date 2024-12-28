@@ -40,7 +40,7 @@
     padding: 10px 20px;
     width: 250px;
     font-size: 16px;
-    background-color: #004443;
+    background-color: #750295;
     color: white;
     border: none;
     border-radius: 8px;
@@ -58,7 +58,7 @@
 
 .expandable-button:hover {
     width: 100%;
-    background-color: #00755c;
+    background-color: #750295;
     overflow-y: auto;
 }
 
@@ -87,7 +87,7 @@
 
 .btn {
     align-items: center;
-    background: #00755c;
+    background: #750295;
     min-width: 200px;
     min-height: 40px;
     border-radius: 4px;
