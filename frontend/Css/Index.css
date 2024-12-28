@@ -250,13 +250,16 @@ body {
 /*Internet - Cable*/
 .tab-link {
     display: inline-block;
-    padding: 0.5rem 1rem;
+    padding: 0.2em 2em;
+    gap: 0.5rem;
     text-decoration: none;
-    color: #666;
+    color: #333;  
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 50px;
     transition: all 0.3s ease;
+    font-weight: 300;
+    font-size: 1.8em;
 }
 .tab-link:hover {
     background-color: #f8f9fa;
@@ -268,6 +271,7 @@ body {
 }
 .w-card{
     min-width: 280px;
+    max-width: 280px;
 }
 .div-responsive {
   width: 100%;
@@ -402,7 +406,6 @@ body {
   border-radius: 40px;
   transition-duration: 0.3s;
 }
-
 .btn-span:hover .sign {
   width: 20%;
   transition-duration: 0.3s;
