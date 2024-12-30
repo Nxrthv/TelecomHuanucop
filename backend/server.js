@@ -100,6 +100,49 @@ app.post('/api/procesar-pago', async (req, res) => {
   }
 });
 
+// Nueva ruta para enviar correos
+app.post('/api/enviar-correoInteresado', async (req, res) => {
+    const { nombre, telefono } = req.body;
+
+    if (!nombre || !telefono) {
+        return res.status(400).json({
+            success: false,
+            message: 'Faltan datos requeridos',
+            missingFields: { nombre, telefono }
+        });
+    }
+
+    const mailOptions = {
+        from: '"Sistema de Notificaciones" <sicv@cablevision.pe>', // Cambia esto por tu correo
+        to: 'huanuco@huanucotelecom.com , huanucoap2@huanucotelecom.com', // Cambia esto por el destinatario
+        subject: 'Nuevo interés recibido',
+        html: `
+            <h2>Nuevo Interesado</h2>
+            <p><strong>Nombre:</strong> ${nombre}</p>
+            <p><strong>Teléfono:</strong> ${telefono}</p>
+        `
+    };
+
+    try {
+        const info = await transporter.sendMail(mailOptions);
+        res.json({
+            success: true,
+            message: 'Correo enviado exitosamente',
+            messageId: info.messageId
+        });
+    } catch (error) {
+        console.error('Error al enviar el correo:', error);
+        res.status(500).json({
+            success: false,
+            message: 'Error al enviar el correo',
+            error: {
+                message: error.message,
+                code: error.code
+            }
+        });
+    }
+});
+
 // Manejo de errores básico
 app.use((err, req, res, next) => {
   console.error(err.stack);

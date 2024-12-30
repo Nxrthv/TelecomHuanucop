@@ -339,8 +339,8 @@
                                 style="font-size: 15px;">S/</small><strong style="font-size: 2em;">40.00</strong></p>
                         <p class="card-text fw-light m-0 p-0 mb-4" style="font-size: 14px;">Precio Regular</p>
                         <ul class="text-start w-75 list-unstyled" style="font-size: 14px;">
-                            <li><i class="bi bi-check2"></i> Instalacion Gratuita</li>
-                            <li><i class="bi bi-check2"></i> Requiere un equipo rounter EOC</li>
+                            <li><i class="bi bi-check2"></i> Instalación Gratuita</li>
+                            <li><i class="bi bi-check2"></i> Requiere un equipo router EOC</li>
                             <li><i class="bi bi-check2"></i> 40 metros de cable para distribuir</li>
                         </ul>
                         <button class="border-0 bg-white fw-bold py-2 w-75 mx-auto mt-2 color1"
@@ -360,8 +360,8 @@
                                 style="font-size: 15px;">S/</small><strong style="font-size: 2em;">50.00</strong></p>
                         <p class="card-text fw-light m-0 p-0 mb-4" style="font-size: 14px;">Precio Regular</p>
                         <ul class="text-start w-75 list-unstyled" style="font-size: 14px;">
-                            <li><i class="bi bi-check2"></i> Instalacion Gratuita</li>
-                            <li><i class="bi bi-check2"></i> Requiere un equipo rounter EOC</li>
+                            <li><i class="bi bi-check2"></i> Instalación Gratuita</li>
+                            <li><i class="bi bi-check2"></i> Requiere un equipo router EOC</li>
                             <li><i class="bi bi-check2"></i> 40 metros de cable para distribuir</li>
                         </ul>
                         <button class="border-0 bg-white fw-bold py-2 w-75 mx-auto mt-2 color1"
@@ -410,14 +410,14 @@
         <div class="col-10 mx-auto justify-content-center d-flex">
             <form class="form" action="">
                 <div class="input-field">
-                    <input required="" autocomplete="off" type="text" name="text" id="username" />
+                    <input required="" autocomplete="off" type="text" name="text" id="interesadoName" />
                     <label for="username">Nombres y Apellidos</label>
                 </div>
                 <div class="input-field">
-                    <input required="" autocomplete="off" type="text" name="text" id="text" />
+                    <input required="" autocomplete="off" type="text" name="text" id="interesadoTelf" />
                     <label for="text">Celular</label>
                 </div>
-                <button class="learn-more">Enviar</button>
+                <button class="learn-more" onclick="enviarCorreo(event)">Enviar</button> 
             </form>
         </div>
 
@@ -442,5 +442,46 @@
     <script src="/frontend/Resources/Js/Elements.js"></script>
 
 </body>
-
-</html>
+<script>
+    // Modificar la función enviarCorreo para obtener los valores
+    async function enviarCorreo(event) {
+        event.preventDefault(); // Evita que el formulario se envíe y la página se recargue
+        // Obtener valores del sessionStorage
+        const nombreInteresado = document.getElementById("interesadoName").value;
+        const telefonoInteresado = document.getElementById("interesadoTelf").value;
+        
+        const datosEnvio = {
+            nombre: nombreInteresado,
+            telefono: telefonoInteresado
+        };   
+        try {
+                const response = await fetch('http://localhost:3000/api/enviar-correoInteresado', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(datosEnvio)
+                });
+                
+                const data = await response.json();
+                console.log('Respuesta completa del servidor:', data);
+                
+                if (!data.success) {
+                    console.error('Detalles del error del servidor:', data.error);
+                    throw new Error(data.error?.message || data.message || 'Error desconocido');
+                }
+                
+                return true;
+            } catch (error) {
+                console.error('Error completo:', error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error al enviar el correo',
+                    text: error.message,
+                    footer: 'Por favor, intente nuevamente o contacte al administrador'
+                });
+                return false;
+            }
+    }
+</script>
+</html> 
