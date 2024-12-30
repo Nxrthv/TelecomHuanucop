@@ -2,17 +2,28 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
+        :root {
+            --color1: #220052;
+            --color2: #5106ac;
+            --color3: #6205d2;
+            --color4: #7507fa;
+            --color5: #a576ff;
+            --color6: #c1a7ff;
+            --color7: #dbceff;
+            --color8: #f4f1ff;
+        }
+
         /* Navegación */
         #nav {
             width: 100%;
         }
 
         .bg {
-            background-color: #2A004E;
+            background-color: #2a004e;
         }
 
         .navbar-toggler-icon {
@@ -31,14 +42,14 @@
         }
 
         .tooltip-container {
-            --background: #2A004E;
+            --background: #2a004e;
             position: relative;
             cursor: pointer;
             transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-            font-size: 16       px;
+            font-size: 16px;
             font-weight: 600;
             color: white;
-            padding: .5em 1em;
+            padding: 0.5em 1em;
             border-radius: 2em;
             height: 50px;
             width: 180px;
@@ -84,7 +95,7 @@
             transform: translateX(-50%);
             opacity: 0;
             transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-            background: #4c008e;
+            background: var(--color2);
             z-index: -1;
             border-radius: 1em;
             scale: 0;
@@ -99,10 +110,10 @@
             content: "";
             height: 0.6em;
             width: 0.6em;
-            bottom: -1em;
+            bottom: -.4em;
             left: 50%;
             transform: translate(-50%) rotate(45deg);
-            background: var(--background);
+            background: var(--color2);
         }
 
         .tooltip-container:hover .tooltip {
@@ -165,59 +176,77 @@
     <nav id="nav" class="navbar navbar-expand-lg bg position-sticky top-0">
         <div class="container-fluid">
             <a class="navbar-brand mx-3" href="/Index.html"><img id="logo" src="/frontend/Resources/Images/logo.png"
-                    alt=""></a>
+                    alt="" /></a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon toggler-icon-light"></span>
             </button>
             <div class="collapse navbar-collapse row" id="navbarNav">
-                <ul class="navbar-nav px-3 pb-2" style="justify-content: start;">
-                    <li class="nav-item"><a class="nav-link px-1 mx-md-2 text-white fw-light" style="font-size: 13px;"
+                <ul class="navbar-nav px-3 pb-2" style="justify-content: start">
+                    <li class="nav-item">
+                        <a class="nav-link px-1 mx-md-2 text-white fw-light" style="font-size: 13px"
                             href="/frontend/Views/CentrosDeExperiencia.html"><i class="bi bi-geo-alt"></i> Centros de
-                            Experiencia</a></li>
-                    <li class="nav-item"><a class="nav-link px-1 mx-md-2 text-white fw-light" style="font-size: 13px;"
-                            href="/frontend/Views/Conocenos.html"><i class="bi bi-building"></i> Conócenos</a></li>
-                    <li class="nav-item"><a class="nav-link px-1 mx-md-2 text-white fw-light" style="font-size: 13px;"
-                            href="/frontend/Views/Register.html"><i class="bi bi-people"></i> ¿Ya eres parte de nuesta
-                            familia?</a></li>
-                    <li class="nav-item"><a class="nav-link px-1 mx-md-2 text-white fw-light" style="font-size: 13px;"
-                            href="#" data-bs-toggle="modal" data-bs-target="#myModal"><i
-                                class="bi bi-envelope-paper"></i> Solicitud de suspensión o baja</a></li>
-                    <li class="nav-item"><a class="nav-link px-1 mx-md-2 text-white fw-light" style="font-size: 13px;"
+                            Experiencia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-1 mx-md-2 text-white fw-light" style="font-size: 13px"
+                            href="/frontend/Views/Conocenos.html"><i class="bi bi-building"></i> Conócenos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-1 mx-md-2 text-white fw-light" style="font-size: 13px"
+                            href="/frontend/Views/Register.html"><i class="bi bi-people"></i> ¿Ya eres parte de nuestra
+                            familia?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-1 mx-md-2 text-white fw-light" style="font-size: 13px" href="#"
+                            data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-envelope-paper"></i>
+                            Solicitud de suspensión o
+                            baja</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-1 mx-md-2 text-white fw-light" style="font-size: 13px"
                             href="https://wa.me/962624690?text=Hola, tengo una consulta." target="_blank"><i
-                                class="bi bi-whatsapp"></i> ¿Necesitas ayuda?</a></li>
+                                class="bi bi-whatsapp"></i> ¿Necesitas ayuda?</a>
+                    </li>
                 </ul>
                 <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
-                            <div class="modal-body text-center" style="font-size: 18px;">
+                            <div class="modal-body text-center" style="font-size: 18px">
                                 <div class="d-flex justify-content-end">
                                     <button type="button" class="btn-close border-0" data-bs-dismiss="modal"
                                         aria-label="Cerrar"></button>
                                 </div>
                                 <div class="p-4">
-                                    <p>Por tu seguridad, para solicitar la suspensión o la baja de tu servicio puedes
-                                        comunicarte a los siguientes números:</p>
+                                    <p>
+                                        Por tu seguridad, para solicitar la suspensión o la baja
+                                        de tu servicio puedes comunicarte a los siguientes
+                                        números:
+                                    </p>
                                     <p><i class="bi bi-telephone"></i> 062-514798</p>
-                                    <p><i class="bi bi-telephone"></i> 064-400818 </p>
-                                    <p>O acertate al centro de experiencia mas cercano</p>
+                                    <p><i class="bi bi-telephone"></i> 064-400818</p>
+                                    <p>O acércate al centro de experiencia más cercano</p>
                                     <a href="/frontend/Views/CentrosDeExperiencia.html"
-                                        class="btn btn-success rounded-pill px-5" onclick="redirectToRoute()">Aqui</a>
+                                        class="btn text-white rounded-pill px-5" style="background-color: var(--color1);" onclick="redirectToRoute()">Aquí</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <ul class="navbar-nav ms-auto px-3" style="justify-content: end; align-items: center;">
-                    <li class="nav-link mx-3"><a class="text-white text-decoration-none"
-                            href="/frontend/Views/Cable.html">Grilla de Canales <i
-                                class="bi bi-view-list"></i></a></li>
+                <ul class="navbar-nav ms-auto px-3" style="justify-content: end; align-items: center">
+                    <li class="nav-link mx-3">
+                        <a class="text-white text-decoration-none" href="/frontend/Views/Cable.html">Grilla de Canales
+                            <i class="bi bi-view-list"></i></a>
+                    </li>
                     <li class="nav-item p-1">
                         <a href="/frontend/Views/Register.html">
                             <div class="tooltip-container">
                                 <span class="tooltip">Consulta tus pagos</span>
-                                <span class="text1 d-flex justify-content-center">¿Tus Recibos?<i class="bi bi-file-text mx-2"></i> </span>
-                                <span class="d-flex justify-content-center"><i class="bi bi-person-check mx-2"></i>Ingresar</span>
+                                <span class="text1 d-flex justify-content-center">¿Tus Recibos?<i
+                                        class="bi bi-file-text mx-2"></i>
+                                </span>
+                                <span class="d-flex justify-content-center"><i
+                                        class="bi bi-person-check mx-2"></i>Ingresar</span>
                             </div>
                         </a>
                     </li>

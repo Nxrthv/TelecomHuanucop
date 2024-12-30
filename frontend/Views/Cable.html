@@ -10,94 +10,91 @@
     <title>TELECOM | Canales</title>
 </head>
 
-<body id="body">
+<body style="background-color: var(--color8);">
     <div class="position-sticky top-0" id="contNav" style="z-index: 1000;"></div>
-
-    <div class="text-center bg p-4">
-        <p class="display-6 text-white fw-bold">
+    <div class="text-center p-4 mt-5">
+        <p class="display-6 fw-bold" style="color: var(--color1);">
             ¡Descubre los más de 100 canales que tenemos para ti!
         </p>
     </div>
-
     <div class="container my-lg-5 my-2">
-        <div class="row">
-            <div class="col-12 text-center">
-                <ul class="nav nav-pills channel-categories mb-4 justify-content-center" id="tabList" role="tablist">
-                    <li class="tab-item" role="presentation">
-                        <button class="tab-link active" id="tab1" data-bs-toggle="pill" data-bs-target="#content1" type="button">
-                            <i class="bi bi-house-door"></i>
-                            <span>TV Nacional</span>
-                        </button>
-                    </li>
-                    <li class="tab-item" role="presentation">
-                        <button class="tab-link" id="tab2" data-bs-toggle="pill" data-bs-target="#content2" type="button">
-                            <i class="bi bi-tv"></i>
-                            <span>Entretenimiento</span>
-                        </button>
-                    </li>
-                    <li class="tab-item" role="presentation">
-                        <button class="tab-link" id="tab3" data-bs-toggle="pill" data-bs-target="#content3" type="button">
-                            <i class="bi bi-film"></i>
-                            <span>Películas</span>
-                        </button>
-                    </li>
-                    <li class="tab-item" role="presentation">
-                        <button class="tab-link" id="tab4" data-bs-toggle="pill" data-bs-target="#content4" type="button">
-                            <i class="bi bi-emoji-smile"></i>
-                            <span>Niños</span>
-                        </button>
-                    </li>
-                    <li class="tab-item" role="presentation">
-                        <button class="tab-link" id="tab5" data-bs-toggle="pill" data-bs-target="#content5" type="button">
-                            <i class="bi bi-trophy"></i>
-                            <span>Deportes</span>
-                        </button>
-                    </li>
-                    <li class="tab-item" role="presentation">
-                        <button class="tab-link" id="tab6" data-bs-toggle="pill" data-bs-target="#content6" type="button">
-                            <i class="bi bi-newspaper"></i>
-                            <span>Noticias</span>
-                        </button>
-                    </li>
-                    <li class="tab-item" role="presentation">
-                        <button class="tab-link" id="tab7" data-bs-toggle="pill" data-bs-target="#content7" type="button">
-                            <i class="bi bi-music-note"></i>
-                            <span>Música</span>
-                        </button>
-                    </li>
-                    <li class="tab-item" role="presentation">
-                        <button class="tab-link" id="tab8" data-bs-toggle="pill" data-bs-target="#content8" type="button">
-                            <i class="bi bi-book"></i>
-                            <span>Cultura</span>
-                        </button>
-                    </li>
-                    <li class="tab-item" role="presentation">
-                        <button class="tab-link" id="tab9" data-bs-toggle="pill" data-bs-target="#content9" type="button">
-                            <i class="bi bi-heart"></i>
-                            <span>Novelas</span>
-                        </button>
-                    </li>
-                    <li class="tab-item" role="presentation">
-                        <button class="tab-link" id="tab10" data-bs-toggle="pill" data-bs-target="#content10" type="button">
-                            <i class="bi bi-pray"></i>
-                            <span>Religión</span>
-                        </button>
-                    </li>
-                    <li class="tab-item" role="presentation">
-                        <button class="tab-link" id="tab11" data-bs-toggle="pill" data-bs-target="#content11" type="button">
-                            <i class="bi bi-star"></i>
-                            <span>Exclusivos</span>
-                        </button>
-                    </li>
-                </ul>
-            </div>
+        <div class="col-12 text-center div-responsivex">
+            <ul class="d-flex nav-pills list-unstyled channel-categories" id="tabList"
+                role="tablist">
+                <li class="tab-item" role="presentation">
+                    <button class="tab-link active" id="tab1" data-bs-toggle="pill" data-bs-target="#content1"
+                        type="button">
+                        <i class="bi bi-flag"></i>
+                        <span>TV Nacional</span>
+                    </button>
+                </li>
+                <li class="tab-item" role="presentation">
+                    <button class="tab-link" id="tab2" data-bs-toggle="pill" data-bs-target="#content2" type="button">
+                        <i class="bi bi-tv"></i>
+                        <span>Entretenimiento</span>
+                    </button>
+                </li>
+                <li class="tab-item" role="presentation">
+                    <button class="tab-link" id="tab3" data-bs-toggle="pill" data-bs-target="#content3" type="button">
+                        <i class="bi bi-film"></i>
+                        <span>Películas</span>
+                    </button>
+                </li>
+                <li class="tab-item" role="presentation">
+                    <button class="tab-link" id="tab4" data-bs-toggle="pill" data-bs-target="#content4" type="button">
+                        <i class="bi bi-emoji-smile"></i>
+                        <span>Niños</span>
+                    </button>
+                </li>
+                <li class="tab-item" role="presentation">
+                    <button class="tab-link" id="tab5" data-bs-toggle="pill" data-bs-target="#content5" type="button">
+                        <i class="bi bi-dribbble"></i>
+                        <span>Deportes</span>
+                    </button>
+                </li>
+                <li class="tab-item" role="presentation">
+                    <button class="tab-link" id="tab6" data-bs-toggle="pill" data-bs-target="#content6" type="button">
+                        <i class="bi bi-newspaper"></i>
+                        <span>Noticias</span>
+                    </button>
+                </li>
+                <li class="tab-item" role="presentation">
+                    <button class="tab-link" id="tab7" data-bs-toggle="pill" data-bs-target="#content7" type="button">
+                        <i class="bi bi-music-note"></i>
+                        <span>Música</span>
+                    </button>
+                </li>
+                <li class="tab-item" role="presentation">
+                    <button class="tab-link" id="tab8" data-bs-toggle="pill" data-bs-target="#content8" type="button">
+                        <i class="bi bi-feather"></i>
+                        <span>Cultura</span>
+                    </button>
+                </li>
+                <li class="tab-item" role="presentation">
+                    <button class="tab-link" id="tab9" data-bs-toggle="pill" data-bs-target="#content9" type="button">
+                        <i class="bi bi-heart"></i>
+                        <span>Novelas</span>
+                    </button>
+                </li>
+                <li class="tab-item" role="presentation">
+                    <button class="tab-link" id="tab10" data-bs-toggle="pill" data-bs-target="#content10" type="button">
+                        <i class="bi bi-book"></i>
+                        <span>Religión</span>
+                    </button>
+                </li>
+                <li class="tab-item" role="presentation">
+                    <button class="tab-link" id="tab11" data-bs-toggle="pill" data-bs-target="#content11" type="button">
+                        <i class="bi bi-star"></i>
+                        <span>Exclusivos</span>
+                    </button>
+                </li>
+            </ul>
         </div>
-
-        <div class="tab-content">
+        <div class="tab-content col-12">
             <div class="tab-pane fade show active" id="content1">
                 <div class="channels-container">
                     <h3 class="category-title">TV Nacional</h3>
-                    <div class="channels-grid">
+                    <div class="d-flex flex-wrap">
                         <div class="channel-card">
                             <div class="channel-logo">
                                 <img src="/frontend/Resources/Images/canales/CH_03.png" alt="TV PERÚ">
@@ -239,7 +236,7 @@
             <div class="tab-pane fade" id="content2">
                 <div class="channels-container">
                     <h3 class="category-title">Entretenimiento</h3>
-                    <div class="channels-grid">
+                    <div class="d-flex flex-wrap">
                         <div class="channel-card">
                             <div class="channel-logo">
                                 <img src="/frontend/Resources/Images/canales/CH_18.png" alt="AZ MUNDO">
@@ -327,7 +324,7 @@
             <div class="tab-pane fade" id="content3">
                 <div class="channels-container">
                     <h3 class="category-title">Películas y series</h3>
-                    <div class="channels-grid">
+                    <div class="d-flex flex-wrap">
                         <div class="channel-card">
                             <div class="channel-logo">
                                 <img src="/frontend/Resources/Images/canales/CH_85.png" alt="UNIVERSAL CINEMA">
@@ -478,7 +475,7 @@
             <div class="tab-pane fade" id="content4">
                 <div class="channels-container">
                     <h3 class="category-title">Infantiles y animación</h3>
-                    <div class="channels-grid">
+                    <div class="d-flex flex-wrap">
                         <div class="channel-card">
                             <div class="channel-logo">
                                 <img src="/frontend/Resources/Images/canales/CH_39.png" alt="PLIM PLIM TV">
@@ -566,7 +563,7 @@
             <div class="tab-pane fade" id="content5">
                 <div class="channels-container">
                     <h3 class="category-title">Deportes</h3>
-                    <div class="channels-grid">
+                    <div class="d-flex flex-wrap">
                         <div class="channel-card">
                             <div class="channel-logo">
                                 <img src="/frontend/Resources/Images/canales/CH_75.png" alt="ESPN">
@@ -663,7 +660,7 @@
             <div class="tab-pane fade" id="content6">
                 <div class="channels-container">
                     <h3 class="category-title">Noticias</h3>
-                    <div class="channels-grid">
+                    <div class="d-flex flex-wrap">
                         <div class="channel-card">
                             <div class="channel-logo">
                                 <img src="/frontend/Resources/Images/canales/CH_55.png" alt="DEUTSCHE WELLE">
@@ -751,7 +748,7 @@
             <div class="tab-pane fade" id="content7">
                 <div class="channels-container">
                     <h3 class="category-title">Musicales</h3>
-                    <div class="channels-grid">
+                    <div class="d-flex flex-wrap">
                         <div class="channel-card">
                             <div class="channel-logo">
                                 <img src="/frontend/Resources/Images/canales/CH_38.png" alt="LA RIVEREÑA">
@@ -821,7 +818,7 @@
             <div class="tab-pane fade" id="content8">
                 <div class="channels-container">
                     <h3 class="category-title">Ciencia y cultura</h3>
-                    <div class="channels-grid">
+                    <div class="d-flex flex-wrap">
                         <div class="channel-card">
                             <div class="channel-logo">
                                 <img src="/frontend/Resources/Images/canales/CH_28.png" alt="ANIMAL PLANET">
@@ -936,7 +933,7 @@
             <div class="tab-pane fade" id="content9">
                 <div class="channels-container">
                     <h3 class="category-title">Novelas</h3>
-                    <div class="channels-grid">
+                    <div class="d-flex flex-wrap">
                         <div class="channel-card">
                             <div class="channel-logo">
                                 <img src="/frontend/Resources/Images/canales/CH_29.png" alt="CANAL DRAMA">
@@ -1024,7 +1021,7 @@
             <div class="tab-pane fade" id="content10">
                 <div class="channels-container">
                     <h3 class="category-title">Religión</h3>
-                    <div class="channels-grid">
+                    <div class="d-flex flex-wrap">
                         <div class="channel-card">
                             <div class="channel-logo">
                                 <img src="/frontend/Resources/Images/canales/CH_102.png" alt="ESNE TV">
@@ -1067,10 +1064,11 @@
             <div class="tab-pane fade" id="content11">
                 <div class="channels-container">
                     <h3 class="category-title">Exclusivos</h3>
-                    <div class="channels-grid">
+                    <div class="d-flex flex-wrap">
                         <div class="channel-card">
                             <div class="channel-logo">
-                                <img src="/frontend/Resources/Images/canales/CH_21.png" alt="CABLE VISIÓN TV" style="max-width: 200px;">
+                                <img src="/frontend/Resources/Images/canales/CH_21.png" alt="CABLE VISIÓN TV"
+                                    style="max-width: 200px;">
                             </div>
                             <div class="channel-info">
                                 <h4>CABLE VISIÓN TV</h4>
@@ -1082,77 +1080,65 @@
             </div>
         </div>
     </div>
-    </div>
-    <section>
-        <p class="text-center mb-5 display-6 fw-bold color" style="color: #220052;">
+    <section class="col-12 p-2">
+        <p class="text-center my-4 display-4 color" style="color: var(--color1);">
             ✨ Descubre Nuestros Beneficios ✨
         </p>
-        <div class="d-flex justify-content-around container">
-            <div class="col-3 m-2">
-                <div class="bg-white p-4 rounded    " style="box-shadow: 0 10px 20px #3a00881a; transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
-                    <div class="beneficio-imagen" style="background: linear-gradient(45deg, #220052, #3a0088); padding: 20px; border-radius: 15px; margin-bottom: 20px; text-align: center;">
+        <div class="d-flex flex-wrap justify-content-around">
+            <div class="col-10 col-lg-3 p-2">
+                <div class="bg-white p-4 rounded"
+                    style="box-shadow: 0 10px 20px #3a00881a; transition: transform 0.3s ease; cursor: pointer;"
+                    onmouseover="this.style.transform='translateY(-10px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <div class="beneficio-imagen"
+                        style="background: linear-gradient(45deg, #220052, #3a0088); padding: 20px; border-radius: 15px; margin-bottom: 20px; text-align: center;">
                         <i class="bi bi-tv-fill" style="font-size: 3rem; color: white;"></i>
                     </div>
-                    <h3 style="color: #3a0088; font-size: 1.5rem; font-weight: 600; margin-bottom: 15px;">Programación HD</h3>
-                    <p style="color: #666; line-height: 1.6; font-size: 1rem;">Disfruta de una experiencia visual excepcional con nuestra programación en alta definición. ¡Cada detalle cobra vida!</p>
+                    <h3 style="color: #3a0088; font-size: 1.5rem; font-weight: 600; margin-bottom: 15px;">Programación
+                        HD</h3>
+                    <p style="color: #666; line-height: 1.6; font-size: 1rem;">Disfruta de una experiencia visual
+                        excepcional con nuestra programación en alta definición. ¡Cada detalle cobra vida!</p>
                 </div>
             </div>
-            <div class="col-3 m-2">
-                <div class="bg-white p-4 rounded    " style="box-shadow: 0 10px 20px #3a00881a; transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
-                    <div class="beneficio-imagen" style="background: linear-gradient(45deg, #220052, #3a0088); padding: 20px; border-radius: 15px; margin-bottom: 20px; text-align: center;">
-                        <i class="bi bi-tv-fill" style="font-size: 3rem; color: white;"></i>
-                    </div>
-                    <h3 style="color: #3a0088; font-size: 1.5rem; font-weight: 600; margin-bottom: 15px;">Programación HD</h3>
-                    <p style="color: #666; line-height: 1.6; font-size: 1rem;">Disfruta de una experiencia visual excepcional con nuestra programación en alta definición. ¡Cada detalle cobra vida!</p>
-                </div>
-            </div>
-            <div class="col-3 m-2">
-                <div class="bg-white p-4 rounded    " style="box-shadow: 0 10px 20px #3a00881a; transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
-                    <div class="beneficio-imagen" style="background: linear-gradient(45deg, #220052, #3a0088); padding: 20px; border-radius: 15px; margin-bottom: 20px; text-align: center;">
-                        <i class="bi bi-tv-fill" style="font-size: 3rem; color: white;"></i>
-                    </div>
-                    <h3 style="color: #3a0088; font-size: 1.5rem; font-weight: 600; margin-bottom: 15px;">Programación HD</h3>
-                    <p style="color: #666; line-height: 1.6; font-size: 1rem;">Disfruta de una experiencia visual excepcional con nuestra programación en alta definición. ¡Cada detalle cobra vida!</p>
-                </div>
-            </div>
-            <div class="col-3 m-2">
-                <div class="bg-white p-4 rounded    " style="box-shadow: 0 10px 20px #3a00881a; transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
-                    <div class="beneficio-imagen" style="background: linear-gradient(45deg, #220052, #3a0088); padding: 20px; border-radius: 15px; margin-bottom: 20px; text-align: center;">
-                        <i class="bi bi-tv-fill" style="font-size: 3rem; color: white;"></i>
-                    </div>
-                    <h3 style="color: #3a0088; font-size: 1.5rem; font-weight: 600; margin-bottom: 15px;">Programación HD</h3>
-                    <p style="color: #666; line-height: 1.6; font-size: 1rem;">Disfruta de una experiencia visual excepcional con nuestra programación en alta definición. ¡Cada detalle cobra vida!</p>
-                </div>
-            </div>
-            <!-- <div class="col-md-3 mb-4">
-                <div class="beneficio-card" style="background: white; border-radius: 20px; padding: 30px; box-shadow: 0 10px 20px rgba(58,0,136,0.1); transition: transform 0.3s ease; cursor: pointer; height: 100%;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
-                    <div class="beneficio-imagen" style="background: linear-gradient(45deg, #220052, #3a0088); padding: 20px; border-radius: 15px; margin-bottom: 20px; text-align: center;">
+            <div class="col-10 col-lg-3 p-2">
+                <div class="bg-white p-4 rounded    "
+                    style="box-shadow: 0 10px 20px #3a00881a; transition: transform 0.3s ease; cursor: pointer;"
+                    onmouseover="this.style.transform='translateY(-10px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <div class="beneficio-imagen"
+                        style="background: linear-gradient(45deg, #220052, #3a0088); padding: 20px; border-radius: 15px; margin-bottom: 20px; text-align: center;">
                         <i class="bi bi-piggy-bank-fill" style="font-size: 3rem; color: white;"></i>
                     </div>
                     <h3 style="color: #3a0088; font-size: 1.5rem; font-weight: 600; margin-bottom: 15px;">Super Económico</h3>
                     <p style="color: #666; line-height: 1.6; font-size: 1rem;">¡Más entretenimiento por menos! Planes accesibles que se ajustan perfectamente a tu presupuesto. 💰</p>
                 </div>
             </div>
-            
-            <div class="col-md-3 mb-4">
-                <div class="beneficio-card" style="background: white; border-radius: 20px; padding: 30px; box-shadow: 0 10px 20px rgba(58,0,136,0.1); transition: transform 0.3s ease; cursor: pointer; height: 100%;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
-                    <div class="beneficio-imagen" style="background: linear-gradient(45deg, #220052, #3a0088); padding: 20px; border-radius: 15px; margin-bottom: 20px; text-align: center;">
+            <div class="col-10 col-lg-3 p-2">
+                <div class="bg-white p-4 rounded    "
+                    style="box-shadow: 0 10px 20px #3a00881a; transition: transform 0.3s ease; cursor: pointer;"
+                    onmouseover="this.style.transform='translateY(-10px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <div class="beneficio-imagen"
+                        style="background: linear-gradient(45deg, #220052, #3a0088); padding: 20px; border-radius: 15px; margin-bottom: 20px; text-align: center;">
                         <i class="bi bi-calendar-check-fill" style="font-size: 3rem; color: white;"></i>
                     </div>
                     <h3 style="color: #3a0088; font-size: 1.5rem; font-weight: 600; margin-bottom: 15px;">Pago Adelantado</h3>
                     <p style="color: #666; line-height: 1.6; font-size: 1rem;">¡Adelanta y ahorra! Obtén descuentos especiales al realizar tus pagos por adelantado. 🎉</p>
                 </div>
             </div>
-            
-            <div class="col-md-3 mb-4">
-                <div class="beneficio-card" style="background: white; border-radius: 20px; padding: 30px; box-shadow: 0 10px 20px rgba(58,0,136,0.1); transition: transform 0.3s ease; cursor: pointer; height: 100%;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
-                    <div class="beneficio-imagen" style="background: linear-gradient(45deg, #220052, #3a0088); padding: 20px; border-radius: 15px; margin-bottom: 20px; text-align: center;">
+            <div class="col-10 col-lg-3 p-2">
+                <div class="bg-white p-4 rounded    "
+                    style="box-shadow: 0 10px 20px #3a00881a; transition: transform 0.3s ease; cursor: pointer;"
+                    onmouseover="this.style.transform='translateY(-10px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <div class="beneficio-imagen"
+                        style="background: linear-gradient(45deg, #220052, #3a0088); padding: 20px; border-radius: 15px; margin-bottom: 20px; text-align: center;">
                         <i class="bi bi-award-fill" style="font-size: 3rem; color: white;"></i>
                     </div>
                     <h3 style="color: #3a0088; font-size: 1.5rem; font-weight: 600; margin-bottom: 15px;">Experiencia Confiable</h3>
                     <p style="color: #666; line-height: 1.6; font-size: 1rem;">Años de experiencia nos respaldan. Tu satisfacción es nuestra prioridad número uno. ⭐</p>
                 </div>
-            </div> -->
+            </div>
         </div>
     </section>
     <div id="contFoot"></div>
