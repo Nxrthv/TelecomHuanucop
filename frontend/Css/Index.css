@@ -1,8 +1,3 @@
-body {
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
 /* Rutas */
 .cont-user {
   max-width: 25em;
@@ -202,7 +197,7 @@ body {
 }
 .promo {
   border-radius: 1em;
-  background: linear-gradient(to right, var(--color1), #5c246c);
+  background: linear-gradient(to top, var(--color1), #5c246c);
   padding: 1.5em;
   color: white;
 }
@@ -238,7 +233,7 @@ body {
     background-color: var(--color8);
 }
 .tab-link.active {
-    background-color: var(--color1);
+    background: linear-gradient(to bottom, #5c246c, var(--color1));
     color: white;
 }
 .w-card{
@@ -399,7 +394,6 @@ body {
 .input-field {
   position: relative;
 }
-
 .input-field label {
   position: absolute;
   color: var(--color1);
@@ -437,17 +431,6 @@ body {
   border-radius: 100px;
 }
 
-.form .passicon {
-  cursor: pointer;
-  font-size: 1.3rem;
-  position: absolute;
-  top: 6px;
-  right: 8px;
-}
-
-.form .close {
-  display: none;
-}
 .learn-more {
   position: relative;
   display: inline-block;

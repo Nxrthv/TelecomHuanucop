@@ -1,0 +1,15 @@
+{
+    "channels": [
+      {
+        "name": "TV PERÚ",
+        "channelNumber": "Canal 03",
+        "image": "/frontend/Resources/Images/canales/CH_03.png"
+      },
+      {
+        "name": "Canal 7",
+        "channelNumber": "Canal 07",
+        "image": "/frontend/Resources/Images/canales/CH_07.png"
+      }
+    ]
+  }
+  

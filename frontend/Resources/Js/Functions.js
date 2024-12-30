@@ -52,7 +52,7 @@ function smoothScrollTo(sectionId, offset = 128) {
     requestAnimationFrame(animation);
 };
 
-// Annimacion de carga
+// Animacion de carga
 window.addEventListener("load", () => {
     const loading = document.getElementById("loading");
     const content = document.getElementById("content");
