@@ -67,7 +67,7 @@ body {
   content: "";
   position: absolute;
   width: 1px;
-  height: 0;
+  height: 0;    
   background-color: var(--color1);
   transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
 }
@@ -224,8 +224,7 @@ body {
 
 /*Internet - Cable*/
 .tab-link {
-    display: inline-block;
-    padding: 0.2em 2em;
+    padding: 0.3em 1.5em;
     gap: 0.5rem;
     text-decoration: none;
     color: var(--color1);  
