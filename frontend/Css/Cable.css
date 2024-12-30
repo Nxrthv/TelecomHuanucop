@@ -48,6 +48,7 @@
 }
 .tab-content > .active {
     display: block;
+    width: 100%;
     transition: .1s ease-in-out;
 }
 
@@ -59,14 +60,12 @@
     border-bottom: 1px solid var(--color7);
 }
 .channel-card {
-    display: flex;
-    flex-direction: column;
     background: white;
     border-radius: 10px;
-    padding: 15px;
     transition: transform 0.2s ease;
     align-items: center;
     text-align: center;
+    padding: 15px;
 }
 .channel-card:hover {
     transform: translateY(-5px);
