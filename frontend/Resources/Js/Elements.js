@@ -19,6 +19,6 @@ fetch(url)
     });
 }
 document.addEventListener("DOMContentLoaded", function() {
-cargarFragmento('/frontend/Views/Footer.html', 'contFoot');
-cargarFragmento('/frontend/Views/Nav.html', 'contNav');
+cargarFragmento('frontend/Views/Footer.html', 'contFoot');
+cargarFragmento('frontend/Views/Nav.html', 'contNav');
 });

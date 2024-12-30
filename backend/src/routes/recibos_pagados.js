@@ -17,8 +17,7 @@ router.get('/:codigoUsuario', async (req, res) => {
     d.monto AS deuda,
     d.codigo_cobro AS codigo_pago,
     cs.anulado AS servicio_anulado,
-    TO_CHAR(d.fecha_vencimiento, 'YYYY-MM-DD') AS fecha_vencimiento,
-    d.fecha_ultimo_pago
+    TO_CHAR(d.fecha_ultimo_pago, 'YYYY-MM-DD') AS fecha_ultimo_pago
 FROM 
     "SH_huanuco002".deuda d
 INNER JOIN 
@@ -38,7 +37,7 @@ WHERE
 	  AND d.codigo_abonado = $1
 ORDER BY
 	d.codigo_abonado ASC,
-    d.fecha_ultimo_pago DESC
+    fecha_ultimo_pago DESC
     `;
     const result = await pool.query(query, [codigoUsuario]);
 

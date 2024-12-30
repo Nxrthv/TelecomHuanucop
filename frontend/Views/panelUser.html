@@ -78,6 +78,7 @@
                                     <th><i class="fas fa-hashtag"></i> ID Recibo</th>
                                     <th><i class="fas fa-file-alt"></i> Concepto</th>
                                     <th><i class="fas fa-money-bill-wave"></i> Precio</th>
+                                    <th><i class="fas fa-calendar"></i> Fecha de Pago</th>
                                     <th><i class="fas fa-check"></i> Estado</th>
                                 </tr>
                             </thead>
@@ -168,6 +169,7 @@
                         <td>${recibo.codigo_pago || 'N/A'}</td>
                         <td>${recibo.concepto || 'N/A'}</td>
                         <td>S/. ${recibo.deuda || '0.00'}</td>
+                        <td>${recibo.fecha_ultimo_pago || 'N/A'}</td>
                         <td><img class="img img-fluid check-item" src="/frontend/Resources/Images/pagado.png"></td>
                     `;
                     tablaBody.appendChild(tr);
