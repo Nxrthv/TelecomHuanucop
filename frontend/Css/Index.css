@@ -202,7 +202,7 @@ body {
 }
 .promo {
   border-radius: 1em;
-  background: linear-gradient(to right, var(--color1), #563061);
+  background: linear-gradient(to right, var(--color1), #5c246c);
   padding: 1.5em;
   color: white;
 }
@@ -325,7 +325,7 @@ body {
 }
 
 .acceptButton:hover {
-  background-color: #563061;
+  background-color: #5c246c;
   transition-duration: 0.2s;
 }
 
