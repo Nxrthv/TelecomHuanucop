@@ -1,17 +1,22 @@
+body{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
 .div-responsivex {
     width: 100%;
     overflow-y: hidden;
 }
 .div-responsivex::-webkit-scrollbar {
-    height: 2px;
+    height: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--color6);
+    background: var(--color7);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--color4);
+    background: var(--color6);
 }
 .nav-pills {
     gap: 0.5rem;
@@ -48,40 +53,35 @@
 }
 .tab-content > .active {
     display: block;
-    width: 100%;
     transition: .1s ease-in-out;
 }
-
-.category-title {
-    font-size: 1.8rem;
-    color: var(--color1);
-    margin-top: 1em;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--color7);
+.row-channels{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 .channel-card {
-    background: white;
-    border-radius: 10px;
+    background-color: #b69ff571;
     transition: transform 0.2s ease;
     align-items: center;
     text-align: center;
-    padding: 15px;
+    padding: 20px 10px;
 }
 .channel-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-.channel-logo img {
+.channel-logo {
     width: 120px;
     height: 120px;
     margin-bottom: 1em;
 }
-.channel-info h4 {
-    font-size: 1rem;
-    margin: 0;
+.channel-title {
+    font-size: .9em;
     color: var(--color1);
+    font-weight: bold;
 }
-.channel-info span {
-    font-size: 0.9rem;
-    color: var(--color3);
+.channel-span {
+    font-size: 0.8rem;
+    color: var(--color2);
 }
