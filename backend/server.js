@@ -7,13 +7,35 @@ const authRoutes = require('./src/routes/auth');
 const app = express();
 require('dotenv').config();
 // Middlewares
-app.use(cors());
+app.use((req, res, next) => {
+  console.log(`-> ${new Date().toISOString()} - Petición recibida: ${req.method} ${req.url}`);
+  next();
+});
+
+app.use(cors({
+  origin: ['http://191.97.50.142:11005'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
+
+// Para mejor debugging, modifica el log de CORS
+app.use((req, res, next) => {
+  console.log('\n=== PETICIÓN RECIBIDA ===');
+  console.log('-> Origen de la petición:', req.headers.origin);
+  console.log('-> Método:', req.method);
+  console.log('-> URL:', req.url);
+  console.log('-> Puerto del servidor:', process.env.PORT || 3000);
+  next();
+});
+
 app.use(express.json());
 
 // Ruta de prueba básica
 app.get('/', (req, res) => {
   res.send('API de Recibos funcionando');
 });
+
 
 // Rutas
 app.use('/api/recibos_pagados', recibosPagadosRoutes);

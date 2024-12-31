@@ -118,7 +118,7 @@
         async function cargarRecibosPendientes() {
             try {
                 const codigoUsuario = sessionStorage.getItem('codigoUsuario');
-                const response = await fetch(`http://localhost:3000/api/recibos_pendientes/${codigoUsuario}`);
+                const response = await fetch(`http://191.97.50.142:11011/api/recibos_pendientes/${codigoUsuario}`);
                 const recibos = await response.json();
                 
                 const tablaBody = document.getElementById('tabla-body_pendientes');
@@ -152,7 +152,7 @@
         async function cargarRecibosPagados() {
             try {
                 const codigoUsuario = sessionStorage.getItem('codigoUsuario');
-                const response = await fetch(`http://localhost:3000/api/recibos_pagados/${codigoUsuario}`);
+                const response = await fetch(`http://191.97.50.142:11011/api/recibos_pagados/${codigoUsuario}`);
                 const recibos = await response.json();
                 
                 const tablaBody = document.getElementById('tabla-body_pagados');
