@@ -198,11 +198,15 @@
                     contentDiv.setAttribute("role", "tabpanel");
                     contentDiv.setAttribute("aria-labelledby", `tab${category.id}`);
 
+                    const rowDiv = document.createElement("div");
+                    rowDiv.classList.add("row-channels", "mt-4");
+
                     category.channels.forEach((channel) => {
                         const channelElement = createChannelElement(channel);
-                        contentDiv.appendChild(channelElement);
+                        rowDiv.appendChild(channelElement);
                     });
 
+                    contentDiv.appendChild(rowDiv);
                     tabContent.appendChild(contentDiv);
                 });
             })
@@ -213,35 +217,32 @@
 
     function createChannelElement(channel) {
         const channelContainer = document.createElement("div");
-        channelContainer.classList.add("d-flex", "m-2");
+        channelContainer.classList.add("col-6", "col-md-3", "col-lg-2");
 
         const channelCard = document.createElement("div");
-        channelCard.classList.add("col-6", "col-md-3", "col-lg-2", "channel-card");
-
-        const logoDiv = document.createElement("div");
-        logoDiv.classList.add("channel-logo");
+        channelCard.classList.add("channel-card", "rounded", "m-1");
 
         const logoImg = document.createElement("img");
         logoImg.src = channel.image;
         logoImg.alt = channel.name;
-        logoImg.classList.add("img-fluid", "rounded");
+        logoImg.classList.add("channel-logo","img-fluid");
 
-        logoDiv.appendChild(logoImg);
 
         const infoDiv = document.createElement("div");
-        infoDiv.classList.add("channel-info", "mt-2");
+        infoDiv.classList.add("channel-info", "mt-1");
 
-        const channelName = document.createElement("h5");
+        const channelName = document.createElement("p");
+        channelName.classList.add("channel-title");
         channelName.textContent = channel.name;
 
         const channelNumber = document.createElement("span");
         channelNumber.textContent = channel.number;
-        channelNumber.classList.add("text-muted");
+        channelNumber.classList.add("channel-span");
 
         infoDiv.appendChild(channelName);
         infoDiv.appendChild(channelNumber);
 
-        channelCard.appendChild(logoDiv);
+        channelCard.appendChild(logoImg);
         channelCard.appendChild(infoDiv);
 
         channelContainer.appendChild(channelCard);
