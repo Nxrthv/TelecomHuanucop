@@ -229,9 +229,9 @@
 
 
         const infoDiv = document.createElement("div");
-        infoDiv.classList.add("channel-info", "mt-1");
+        infoDiv.classList.add("channel-info", "mt-1", "d-flex", "flex-column");
 
-        const channelName = document.createElement("p");
+        const channelName = document.createElement("span");
         channelName.classList.add("channel-title");
         channelName.textContent = channel.name;
 
